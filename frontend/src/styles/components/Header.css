@@ -1,0 +1,70 @@
+.header {
+  background: var(--primary-gradient);
+  color: white;
+  padding: var(--space-2xl) var(--space-lg);
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated Background Pattern */
+.header::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: drift 20s infinite linear;
+  pointer-events: none;
+}
+
+.header::after {
+  content: '⌬';
+  position: absolute;
+  top: var(--space-lg);
+  left: var(--space-lg);
+  font-size: 3rem;
+  opacity: 0.3;
+  margin-left: 10px;
+  animation: float 4s ease-in-out infinite;
+}
+
+.header h1 {
+  font-size: var(--text-4xl);
+  margin-bottom: var(--space-sm);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: white;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  position: relative;
+  z-index: 1;
+}
+
+.header p {
+  font-size: var(--text-lg);
+  opacity: 0.95;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: var(--text-3xl);
+  }
+  
+  .header p {
+    font-size: var(--text-base);
+  }
+  
+  .header::after {
+    display: none;
+  }
+}

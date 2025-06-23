@@ -1,0 +1,219 @@
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  animation: fadeIn 0.2s ease;
+}
+
+/* Modal Content */
+.modal-content {
+  background: var(--bg-card);
+  border-radius: var(--radius-xl);
+  padding: 0;
+  max-width: 600px;
+  width: 90%;
+  max-height: 80vh;
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  animation: slideUp 0.3s ease;
+}
+
+/* Modal Header */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-xl);
+  border-bottom: 1px solid var(--gray-200);
+  background: var(--gray-50);
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: var(--text-2xl);
+  color: var(--text-primary);
+}
+
+.modal-header button {
+  background: none;
+  border: none;
+  font-size: var(--text-2xl);
+  cursor: pointer;
+  color: var(--text-tertiary);
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-base);
+}
+
+.modal-header button:hover {
+  background: var(--gray-200);
+  color: var(--text-primary);
+  transform: rotate(90deg);
+}
+
+/* Modal Body */
+.modal-body {
+  padding: var(--space-xl);
+  overflow-y: auto;
+  max-height: calc(80vh - 140px);
+}
+
+/* Modal Sections */
+.modal-section {
+  margin-bottom: var(--space-xl);
+}
+
+.modal-section:last-child {
+  margin-bottom: 0;
+}
+
+.modal-section h4 {
+  font-size: var(--text-lg);
+  color: var(--text-primary);
+  margin-bottom: var(--space-md);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.modal-section h4::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 16px;
+  background: var(--primary-gradient);
+  border-radius: var(--radius-full);
+}
+
+/* Metrics Display */
+.metrics {
+  background: var(--gray-50);
+  padding: var(--space-lg);
+  border-radius: var(--radius-md);
+  margin-top: var(--space-sm);
+  display: grid;
+  gap: var(--space-md);
+}
+
+.metric-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.metric-item:last-child {
+  border-bottom: none;
+}
+
+.metric-label {
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.metric-value {
+  font-weight: 700;
+  color: var(--primary-purple);
+  font-size: var(--text-lg);
+}
+
+/* Error State */
+.error {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(239, 68, 68, 0.05));
+  color: var(--text-primary);
+  padding: var(--space-lg);
+  border-radius: var(--radius-md);
+  margin-top: var(--space-lg);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  position: relative;
+  padding-left: var(--space-2xl);
+}
+
+.error::before {
+  content: '❌';
+  position: absolute;
+  left: var(--space-md);
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+}
+
+/* Details/Summary Styling */
+details {
+  margin: var(--space-md) 0;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: 600;
+  padding: var(--space-md);
+  color: var(--primary-purple);
+  background: var(--gray-50);
+  transition: all var(--transition-base);
+  user-select: none;
+}
+
+summary:hover {
+  background: var(--gray-100);
+}
+
+details[open] summary {
+  border-bottom: 1px solid var(--gray-200);
+}
+
+/* Code blocks */
+pre {
+  background: var(--gray-900);
+  color: var(--gray-100);
+  padding: var(--space-lg);
+  border-radius: var(--radius-md);
+  overflow-x: auto;
+  font-size: var(--text-sm);
+  margin: var(--space-sm) 0;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  line-height: 1.5;
+}
+
+code {
+  background: var(--gray-100);
+  color: var(--primary-purple);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-sm);
+  font-size: 0.9em;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+}
+
+pre code {
+  background: none;
+  color: inherit;
+  padding: 0;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

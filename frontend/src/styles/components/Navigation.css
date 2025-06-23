@@ -1,0 +1,89 @@
+.nav {
+  background: var(--bg-card);
+  padding: 0;
+  display: flex;
+  box-shadow: var(--shadow-sm);
+  overflow-x: auto;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--gray-200);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Hide scrollbar for navigation */
+.nav::-webkit-scrollbar {
+  display: none;
+}
+
+.nav button {
+  background: none;
+  border: none;
+  padding: var(--space-lg) var(--space-xl);
+  cursor: pointer;
+  font-size: var(--text-base);
+  font-weight: 500;
+  color: var(--text-secondary);
+  border-bottom: 3px solid transparent;
+  transition: all var(--transition-base);
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover effect */
+.nav button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-hover);
+  transform: translateY(100%);
+  transition: transform var(--transition-base);
+}
+
+.nav button:hover::before {
+  transform: translateY(0);
+}
+
+.nav button:hover {
+  color: var(--primary-purple);
+}
+
+/* Active state */
+.nav button.active {
+  color: var(--primary-purple);
+  border-bottom-color: var(--primary-purple);
+  background: linear-gradient(to bottom, transparent, rgba(124, 58, 237, 0.05));
+}
+
+.nav button.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 3px;
+  background: var(--primary-purple);
+  border-radius: var(--radius-full) var(--radius-full) 0 0;
+  animation: slideIn 0.3s ease;
+}
+
+/* Tab indicators */
+.nav button span {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes slideIn {
+  from {
+    width: 0;
+  }
+  to {
+    width: 30px;
+  }
+}

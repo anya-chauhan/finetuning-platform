@@ -1,0 +1,208 @@
+/* Jobs Header */
+.jobs-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-2xl);
+  animation: slideDown 0.5s ease;
+}
+
+.jobs-header h2 {
+  margin: 0;
+}
+
+/* Refresh Button */
+.refresh-button {
+  background: var(--bg-card);
+  border: 2px solid var(--gray-200);
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.refresh-button:hover {
+  background: var(--primary-purple);
+  border-color: var(--primary-purple);
+  color: white;
+}
+
+
+/* Jobs List */
+.jobs-list {
+  display: grid;
+  gap: var(--space-lg);
+  animation: fadeIn 0.5s ease;
+}
+
+/* Job Card */
+.job-card {
+  background: var(--bg-card);
+  border: 1px solid var(--primary-purple-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.job-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--primary-gradient);
+  transform: scaleY(0);
+  transition: transform var(--transition-base);
+  transform-origin: bottom;
+}
+
+.job-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+  border-color: var(--primary-purple-light);
+}
+
+.job-card:hover::before {
+  transform: scaleY(1);
+}
+
+/* Job Header */
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-lg);
+}
+
+.job-header h3 {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: var(--text-xl);
+}
+
+/* Status Badge */
+.status-badge {
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  color: #fff;
+}
+
+.status-badge.running {
+  background: var(--info-blue);
+  color: white;
+}
+
+.status-badge.completed {
+  background: var(--success-green);
+  color: white;
+}
+
+.status-badge.failed {
+  background: var(--gray-600);
+  color: white;
+}
+
+.status-badge.pending {
+  background: var(--primary-purple-light);
+  color: white;
+}
+
+/* Progress Bar */
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: var(--gray-200);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin-top: var(--space-md);
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--info-blue-gradient, var(--info-blue));
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  animation: shimmer 2s infinite;
+}
+
+/* Job Details */
+.job-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+.job-detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.job-detail-label {
+  font-size: var(--text-sm);
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.job-detail-value {
+  font-size: var(--text-base);
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Empty State */
+.jobs-empty {
+  text-align: center;
+  padding: var(--space-2xl);
+  color: var(--text-secondary);
+}
+
+.jobs-empty p {
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-lg);
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+  
+}

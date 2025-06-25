@@ -55,7 +55,11 @@ function JobCard({ job, onClick }) {
           {job.status}
         </span>
       </div>
-      <p>Context: {job.context}</p>
+      <p>Context{job.contexts && job.contexts.length > 1 ? 's' : ''}: {
+      job.contexts 
+        ? job.contexts.join(', ')  // This adds comma and space between contexts
+        : job.context  // Fallback for old jobs
+    }</p>
       <p>Progress: {job.progress}%</p>
       {job.status === 'started' && (
         <div className="progress-bar">
@@ -75,22 +79,29 @@ function JobDetails({ job, onClose }) {
   const [loadingImportance, setLoadingImportance] = useState(false);
 
   const fetchGeneImportance = async () => {
-  setLoadingImportance(true);
-  try {
-    // The gene importance should already be in the job object
-    if (job.gene_importance) {
-      setGeneImportance(job.gene_importance);
-      setShowGeneImportance(true);
-    } else {
-      alert('Gene importance data not available for this job yet');
+    setLoadingImportance(true);
+    try {
+      // The gene importance should already be in the job object
+      if (job.gene_importance) {
+        setGeneImportance(job.gene_importance);
+        setShowGeneImportance(true);
+      } else {
+        alert('Gene importance data not available for this job yet');
+      }
+    } catch (error) {
+      console.error('Failed to load gene importance:', error);
+      alert('Failed to load gene importance data');
+    } finally {
+      setLoadingImportance(false);
     }
-  } catch (error) {
-    console.error('Failed to load gene importance:', error);
-    alert('Failed to load gene importance data');
-  } finally {
-    setLoadingImportance(false);
-  }
-};
+  };
+
+  // Helper function to format metric values
+  const formatMetric = (value, isPercentage = false) => {
+    if (value === null || value === undefined) return 'N/A';
+    if (isPercentage) return `${(value * 100).toFixed(1)}%`;
+    return value.toFixed(4);
+  };
 
   return (
     <div className="modal-overlay" onClick={onClose}>
@@ -101,7 +112,11 @@ function JobDetails({ job, onClose }) {
         </div>
         <div className="modal-body">
           <p><strong>Status:</strong> {job.status}</p>
-          <p><strong>Context:</strong> {job.context}</p>
+          <p><strong>Context{job.contexts && job.contexts.length > 1 ? 's' : ''}:</strong> {
+  job.contexts 
+    ? job.contexts.join(', ')
+    : job.context
+}</p>
           <p><strong>Progress:</strong> {job.progress}%</p>
           <p><strong>Started:</strong> {new Date(job.timestamp).toLocaleString()}</p>
           
@@ -113,12 +128,120 @@ function JobDetails({ job, onClose }) {
           )}
 
           {job.metrics && job.metrics.length > 0 && (
-            <details>
+            <details open>
               <summary>Training Metrics</summary>
               <div className="metrics">
-                {job.metrics.slice(-5).map((metric, i) => (
-                  <p key={i}>Epoch {metric.epoch}: Loss = {metric.loss.toFixed(4)}</p>
-                ))}
+                {/* Show latest metrics */}
+                {(() => {
+                  const latestMetric = job.metrics[job.metrics.length - 1];
+                  return (
+                    <div style={{ marginBottom: '15px' }}>
+                      <h4 style={{ margin: '10px 0 5px 0' }}>Latest Metrics (Epoch {latestMetric.epoch}):</h4>
+                      <div style={{ 
+                        display: 'grid', 
+                        gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', 
+                        gap: '10px',
+                        backgroundColor: '#f5f5f5',
+                        padding: '10px',
+                        borderRadius: '5px'
+                      }}>
+                        <div>
+                          <strong>Loss:</strong> {formatMetric(latestMetric.loss)}
+                        </div>
+                        {latestMetric.accuracy !== undefined && (
+                          <div>
+                            <strong>Accuracy:</strong> {formatMetric(latestMetric.accuracy, true)}
+                          </div>
+                        )}
+                        {latestMetric.precision !== undefined && (
+                          <div>
+                            <strong>Precision:</strong> {formatMetric(latestMetric.precision, true)}
+                          </div>
+                        )}
+                        {latestMetric.recall !== undefined && (
+                          <div>
+                            <strong>Recall:</strong> {formatMetric(latestMetric.recall, true)}
+                          </div>
+                        )}
+                        {latestMetric.f1_score !== undefined && (
+                          <div>
+                            <strong>F1 Score:</strong> {formatMetric(latestMetric.f1_score)}
+                          </div>
+                        )}
+                        {latestMetric.auc_roc !== undefined && (
+                          <div>
+                            <strong>AUC-ROC:</strong> {formatMetric(latestMetric.auc_roc)}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  );
+                })()}
+
+                {/* Show best metrics if completed */}
+                {job.status === 'completed' && job.best_metrics && (
+                  <div style={{ marginBottom: '15px' }}>
+                    <h4 style={{ margin: '10px 0 5px 0' }}>   Best Performance {job.best_metrics.epoch && `(Epoch ${job.best_metrics.epoch})`}:
+    </h4>
+                    <div style={{ 
+                      display: 'grid', 
+                      gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', 
+                      gap: '10px',
+                      backgroundColor: '#e8f5e9',
+                      padding: '10px',
+                      borderRadius: '5px',
+                      border: '1px solid #4caf50'
+                    }}>
+                      <div>
+                        <strong>Loss:</strong> {formatMetric(job.best_metrics.loss)}
+                      </div>
+                      {job.best_metrics.accuracy !== undefined && (
+                        <div>
+                          <strong>Accuracy:</strong> {formatMetric(job.best_metrics.accuracy, true)}
+                        </div>
+                      )}
+                      {job.best_metrics.precision !== undefined && (
+                        <div>
+                          <strong>Precision:</strong> {formatMetric(job.best_metrics.precision, true)}
+                        </div>
+                      )}
+                      {job.best_metrics.recall !== undefined && (
+                        <div>
+                          <strong>Recall:</strong> {formatMetric(job.best_metrics.recall, true)}
+                        </div>
+                      )}
+                      {job.best_metrics.f1_score !== undefined && (
+                        <div>
+                          <strong>F1 Score:</strong> {formatMetric(job.best_metrics.f1_score)}
+                        </div>
+                      )}
+                      {job.best_metrics.auc_roc !== undefined && (
+                        <div>
+                          <strong>AUC-ROC:</strong> {formatMetric(job.best_metrics.auc_roc)}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                )}
+
+                {/* Show epoch history */}
+                <details>
+                  <summary>Training History (Last 10 epochs)</summary>
+                  <div style={{ marginTop: '10px' }}>
+                    {job.metrics.slice(-10).map((metric, i) => (
+                      <div key={i} style={{ 
+                        padding: '5px 10px', 
+                        backgroundColor: i % 2 === 0 ? '#f9f9f9' : 'white',
+                        fontSize: '14px'
+                      }}>
+                        <strong>Epoch {metric.epoch}:</strong> 
+                        Loss={formatMetric(metric.loss)}
+                        {metric.accuracy !== undefined && `, Acc=${formatMetric(metric.accuracy, true)}`}
+                        {metric.f1_score !== undefined && `, F1=${formatMetric(metric.f1_score)}`}
+                      </div>
+                    ))}
+                  </div>
+                </details>
               </div>
             </details>
           )}
@@ -129,7 +252,7 @@ function JobDetails({ job, onClose }) {
             </div>
           )}
 
-          {/* ADD GENE IMPORTANCE SECTION */}
+          {/* Gene importance section */}
           {job.status === 'completed' && job.model_id && (
             <div className="gene-importance-section">
               {!showGeneImportance ? (

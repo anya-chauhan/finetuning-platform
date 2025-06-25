@@ -7,7 +7,8 @@ import uuid
 from datetime import datetime
 from typing import Dict, List, Tuple, Optional
 import json
-import numpy as np  # Added missing import
+import numpy as np
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, roc_auc_score
 
 from app.models.neural_networks import MLPPredictor, ProteinDataset
 from app.models.schemas import TrainingRequest
@@ -246,6 +247,7 @@ class TrainingService:
             "progress": 0,
             "job_name": request.job_name,
             "context": request.context,
+            "contexts": request.selected_contexts,
             "data_id": data_id,
             "config": request.dict(),
             "suggestions": suggestions["suggested_parameters"],
@@ -367,8 +369,9 @@ class TrainingService:
             print(f"Model input dim: {self.data_service.embedding_dim}, Dataset size: {len(dataset)}")
             print(f"Using suggested hyperparameters: batch_size={batch_size}, lr={learning_rate}, weight_decay={weight_decay}")
             
-            # Training loop
+            # Training loop with metrics tracking
             best_loss = float('inf')
+            best_metrics = {}  # Add this to track best metrics
             patience_counter = 0
             patience = 10 if suggestions.get("early_stopping") else epochs
             
@@ -376,6 +379,11 @@ class TrainingService:
                 model.train()
                 epoch_loss = 0
                 num_batches = 0
+                
+                # Add these for metric calculation
+                all_predictions = []
+                all_probabilities = []
+                all_labels_epoch = []
                 
                 for batch_embeddings, batch_labels in dataloader:
                     optimizer.zero_grad()
@@ -392,32 +400,97 @@ class TrainingService:
                     
                     epoch_loss += loss.item()
                     num_batches += 1
+                    
+                    # Collect predictions for metrics
+                    with torch.no_grad():
+                        # Get probabilities using sigmoid for binary classification
+                        if config.task_type == "binary_classification":
+                            probs = torch.sigmoid(outputs).cpu().numpy()
+                            preds = (probs > 0.5).astype(int)
+                        else:
+                            probs = outputs.cpu().numpy()
+                            preds = probs
+                        
+                        all_probabilities.extend(probs)
+                        all_predictions.extend(preds)
+                        all_labels_epoch.extend(batch_labels.cpu().numpy())
                 
                 avg_loss = epoch_loss / num_batches if num_batches > 0 else 0
                 progress = int((epoch + 1) / epochs * 100)
                 
-                # Early stopping check
-                if avg_loss < best_loss:
-                    best_loss = avg_loss
-                    patience_counter = 0
+                # Calculate metrics
+                metrics = {"loss": avg_loss, "best_loss": best_loss}
+                
+                if config.task_type == "binary_classification" and len(all_predictions) > 0:
+                    # Convert to numpy arrays
+                    y_true = np.array(all_labels_epoch)
+                    y_pred = np.array(all_predictions)
+                    y_proba = np.array(all_probabilities)
+                    
+                    # Calculate classification metrics
+                    metrics["accuracy"] = accuracy_score(y_true, y_pred)
+                    metrics["precision"] = precision_score(y_true, y_pred, zero_division=0)
+                    metrics["recall"] = recall_score(y_true, y_pred, zero_division=0)
+                    metrics["f1_score"] = f1_score(y_true, y_pred, zero_division=0)
+                    
+                    # Calculate AUC-ROC if we have both classes
+                    if len(np.unique(y_true)) > 1:
+                        try:
+                            metrics["auc_roc"] = roc_auc_score(y_true, y_proba)
+                        except:
+                            metrics["auc_roc"] = None
+                    else:
+                        metrics["auc_roc"] = None
+                    
+                    # Track best metrics
+                    if avg_loss < best_loss:
+                        best_loss = avg_loss
+                        best_metrics = metrics.copy()
+                        best_metrics['epoch'] = epoch + 1
+                        patience_counter = 0
+                    else:
+                        patience_counter += 1
                 else:
-                    patience_counter += 1
+                    # For regression, just track loss
+                    if avg_loss < best_loss:
+                        best_loss = avg_loss
+                        patience_counter = 0
+                    else:
+                        patience_counter += 1
                     
                 if patience_counter >= patience and suggestions.get("early_stopping"):
                     print(f"Early stopping at epoch {epoch + 1}")
                     break
                 
-                # Update job status
-                self.jobs[job_id]["progress"] = progress
-                self.jobs[job_id]["metrics"].append({
+                # Update job status with all metrics
+                metric_entry = {
                     "epoch": epoch + 1,
                     "loss": avg_loss,
                     "best_loss": best_loss,
                     "timestamp": datetime.now().isoformat()
-                })
+                }
                 
+                # Add classification metrics if available
+                if config.task_type == "binary_classification":
+                    metric_entry.update({
+                        "accuracy": metrics.get("accuracy"),
+                        "precision": metrics.get("precision"),
+                        "recall": metrics.get("recall"),
+                        "f1_score": metrics.get("f1_score"),
+                        "auc_roc": metrics.get("auc_roc")
+                    })
+                
+                self.jobs[job_id]["progress"] = progress
+                self.jobs[job_id]["metrics"].append(metric_entry)
+                
+                # Enhanced logging
                 if epoch % 10 == 0:
-                    print(f"Epoch {epoch + 1}/{epochs}, Loss: {avg_loss:.4f}")
+                    if config.task_type == "binary_classification":
+                        print(f"Epoch {epoch + 1}/{epochs}, Loss: {avg_loss:.4f}, "
+                              f"Acc: {metrics.get('accuracy', 0):.3f}, "
+                              f"F1: {metrics.get('f1_score', 0):.3f}")
+                    else:
+                        print(f"Epoch {epoch + 1}/{epochs}, Loss: {avg_loss:.4f}")
                 
                 await asyncio.sleep(0.01)
             
@@ -486,14 +559,22 @@ class TrainingService:
                 }
             }
             
-            # Update job status
+            # Update job status with final metrics
             self.jobs[job_id]["status"] = "completed"
             self.jobs[job_id]["model_id"] = model_id
             self.jobs[job_id]["final_loss"] = avg_loss
             self.jobs[job_id]["best_loss"] = best_loss
             self.jobs[job_id]["actual_epochs"] = epoch + 1
             
+            # Add best metrics to job
+            if best_metrics and config.task_type == "binary_classification":
+                self.jobs[job_id]["best_metrics"] = best_metrics
+            
             print(f"Training completed for job {job_id}, final loss: {avg_loss:.4f}")
+            if config.task_type == "binary_classification" and best_metrics:
+                print(f"Best metrics - Acc: {best_metrics.get('accuracy', 0):.3f}, "
+                      f"F1: {best_metrics.get('f1_score', 0):.3f}, "
+                      f"AUC: {best_metrics.get('auc_roc', 0):.3f}")
         
         except Exception as e:
             self.jobs[job_id]["status"] = "failed"

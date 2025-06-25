@@ -27,12 +27,20 @@ class ProteinPrediction(BaseModel):
     confidence: Optional[float] = None
     error: Optional[str] = None
 
+
 class JobMetric(BaseModel):
     """Training metric for a single epoch"""
     epoch: int
     loss: float
     best_loss: float
     timestamp: str
+    accuracy: Optional[float] = None
+    precision: Optional[float] = None
+    recall: Optional[float] = None
+    f1_score: Optional[float] = None
+    auc_roc: Optional[float] = None
+    val_loss: Optional[float] = None
+    val_accuracy: Optional[float] = None
 
 class JobResponse(BaseModel):
     """Response model for job status"""
@@ -48,6 +56,7 @@ class JobResponse(BaseModel):
     model_id: Optional[str] = None
     final_loss: Optional[float] = None
     best_loss: Optional[float] = None
+    best_metrics: Optional[Dict[str, float]] = None  # Add this field
     error: Optional[str] = None
 
 class DataUploadResponse(BaseModel):

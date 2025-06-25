@@ -206,3 +206,21 @@ async def get_context_stats(data_service: DataService = Depends(get_data_service
         "total_contexts": len(stats),
         "embedding_dimension": data_service.embedding_dim
     }
+@router.get("/training-runs/{run_id}/gene-importance")
+async def get_gene_importance(
+        run_id: str,
+        training_service: TrainingService = Depends(get_training_service)
+    ):
+        """Get gene importance scores for a training run"""
+        try:
+            job = training_service.get_job(run_id)
+            
+            if 'gene_importance' not in job:
+                raise HTTPException(status_code=404, detail="Gene importance not calculated for this run")
+            
+            return {
+                "run_id": run_id,
+                "gene_importance": job['gene_importance']
+            }
+        except ValueError:
+            raise HTTPException(status_code=404, detail="Training run not found")

@@ -11,6 +11,7 @@ class TrainingRequest(BaseModel):
     epochs: int = 30
     learning_rate: float = 0.001
     batch_size: int = 32
+    selected_contexts: Optional[List[str]] = None
 
 class PredictionRequest(BaseModel):
     """Request model for predictions"""

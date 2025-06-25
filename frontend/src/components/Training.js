@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Select from 'react-select'; // ADD THIS IMPORT
 import { api } from '../services/api';
 
 export function TrainTab({ contexts, uploadedData, onJobCreated }) {
@@ -6,7 +7,8 @@ export function TrainTab({ contexts, uploadedData, onJobCreated }) {
   console.log('uploadedData contents:', JSON.stringify(uploadedData));
   const [config, setConfig] = useState({
     job_name: '',
-    context: '',
+    context: '', // Keep this for backward compatibility
+    selected_contexts: [], // ADD THIS for multi-select
     task_type: 'binary_classification',
     epochs: 50,
     learning_rate: 0.001,
@@ -16,6 +18,10 @@ export function TrainTab({ contexts, uploadedData, onJobCreated }) {
   const [suggestions, setSuggestions] = useState(null);
   const [loadingSuggestions, setLoadingSuggestions] = useState(false);
   const [useCustomParams, setUseCustomParams] = useState(false);
+  const [selectAll, setSelectAll] = useState(false); // ADD THIS
+
+  // Prepare context options for react-select
+  const contextOptions = contexts.map(ctx => ({ value: ctx, label: ctx })); // ADD THIS
 
   
   // Fetch parameter suggestions when data is uploaded
@@ -77,6 +83,35 @@ export function TrainTab({ contexts, uploadedData, onJobCreated }) {
     }
   };
 
+  // ADD THIS: Handle multi-select context change
+  const handleContextChange = (selected) => {
+    setConfig(prev => ({
+      ...prev,
+      selected_contexts: selected || [],
+      context: selected && selected.length > 0 ? selected[0].value : '' // Keep first for backward compatibility
+    }));
+    setSelectAll(false);
+  };
+
+  // ADD THIS: Handle select all contexts
+  const handleSelectAll = () => {
+    if (selectAll) {
+      setConfig(prev => ({
+        ...prev,
+        selected_contexts: [],
+        context: ''
+      }));
+      setSelectAll(false);
+    } else {
+      setConfig(prev => ({
+        ...prev,
+        selected_contexts: contextOptions,
+        context: contextOptions[0]?.value || ''
+      }));
+      setSelectAll(true);
+    }
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!uploadedData) {
@@ -84,21 +119,34 @@ export function TrainTab({ contexts, uploadedData, onJobCreated }) {
       return;
     }
 
+    // MODIFIED: Check for selected contexts
+    if (!config.selected_contexts || config.selected_contexts.length === 0) {
+      alert('Please select at least one context');
+      return;
+    }
+
     setTraining(true);
     try {
-      const result = await api.startTraining(uploadedData.data_id, config);
+      // MODIFIED: Include selected_contexts in the API call
+      const trainingConfig = {
+        ...config,
+        selected_contexts: config.selected_contexts.map(ctx => ctx.value) // Extract values from react-select format
+      };
+      const result = await api.startTraining(uploadedData.data_id, trainingConfig);
       alert(`Training started! Job ID: ${result.job_id}`);
       onJobCreated();
       // Reset form
       setConfig({
         job_name: '',
         context: '',
+        selected_contexts: [], // RESET THIS TOO
         task_type: 'binary_classification',
         epochs: 50,
         learning_rate: 0.001,
         batch_size: 32
       });
       setUseCustomParams(false);
+      setSelectAll(false); // RESET THIS TOO
     } catch (error) {
       console.error('Training error:', error);
       alert('Training failed to start');
@@ -174,18 +222,42 @@ export function TrainTab({ contexts, uploadedData, onJobCreated }) {
               />
             </div>
 
+            {/* REPLACED: Single select with multi-select */}
             <div className="form-group">
-              <label>Biological Context:</label>
-              <select
-                value={config.context}
-                onChange={(e) => setConfig({...config, context: e.target.value})}
-                required
+              <label>Biological Contexts:</label>
+              <button 
+                type="button"
+                onClick={handleSelectAll}
+                style={{
+                  marginBottom: '10px',
+                  padding: '5px 15px',
+                  backgroundColor: selectAll ? '#4CAF50' : '#f0f0f0',
+                  color: selectAll ? 'white' : 'black',
+                  border: '1px solid #ddd',
+                  borderRadius: '4px',
+                  cursor: 'pointer'
+                }}
               >
-                <option value="">Select context...</option>
-                {contexts.map(ctx => (
-                  <option key={ctx} value={ctx}>{ctx}</option>
-                ))}
-              </select>
+                {selectAll ? '✓ All Contexts Selected' : 'Select All Contexts'}
+              </button>
+              
+              <Select
+                isMulti
+                name="contexts"
+                options={contextOptions}
+                value={config.selected_contexts}
+                onChange={handleContextChange}
+                className="context-multi-select"
+                classNamePrefix="select"
+                placeholder="Select contexts..."
+                required={config.selected_contexts.length === 0}
+              />
+              
+              {config.selected_contexts.length > 0 && (
+                <p style={{ marginTop: '5px', fontSize: '14px', color: '#666' }}>
+                  {config.selected_contexts.length} context(s) selected
+                </p>
+              )}
             </div>
 
             <div className="form-group">

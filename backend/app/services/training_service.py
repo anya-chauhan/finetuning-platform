@@ -7,6 +7,7 @@ import uuid
 from datetime import datetime
 from typing import Dict, List, Tuple, Optional
 import json
+import numpy as np  # Added missing import
 
 from app.models.neural_networks import MLPPredictor, ProteinDataset
 from app.models.schemas import TrainingRequest
@@ -267,19 +268,50 @@ class TrainingService:
             protein_ids_data = data["protein_ids"]
             labels = data["labels"]
             
-            # Get context
-            context_id = self.data_service.parse_context(config.context)
-            
-            # Get embeddings
-            embeddings_list, valid_indices = self.data_service.get_embeddings_for_proteins(
-                protein_ids_data, context_id
-            )
-            
-            if len(embeddings_list) < 2:
-                raise ValueError(f"Only {len(embeddings_list)} proteins found. Need at least 2.")
-            
-            # Get valid labels
-            valid_labels = [labels[i] for i in valid_indices]
+            # ADD THIS - Handle multiple contexts
+            # Get config dict to check for selected_contexts
+            config_dict = config.dict()
+
+            # Determine which contexts to use
+            contexts_to_use = []
+            if 'selected_contexts' in config_dict and config_dict['selected_contexts']:
+                contexts_to_use = config_dict['selected_contexts']
+            elif config.context:
+                contexts_to_use = [config.context]
+            else:
+                raise ValueError("No contexts selected for training")
+
+            print(f"Training with contexts: {contexts_to_use}")
+
+            # Collect embeddings from ALL contexts
+            all_embeddings = []
+            all_labels = []
+            all_valid_proteins = []  # Track which proteins were used
+
+            for context in contexts_to_use:
+                context_id = self.data_service.parse_context(context)
+                embeddings_list, valid_indices = self.data_service.get_embeddings_for_proteins(
+                    protein_ids_data, context_id
+                )
+                
+                if len(embeddings_list) > 0:
+                    # Add embeddings from this context
+                    all_embeddings.extend(embeddings_list)
+                    
+                    # Get corresponding labels for valid proteins in this context
+                    context_labels = [labels[i] for i in valid_indices]
+                    all_labels.extend(context_labels)
+        
+                    # Track which proteins were valid (for gene importance later)
+                    valid_proteins = [protein_ids_data[i] for i in valid_indices]
+                    all_valid_proteins.extend(valid_proteins)
+                    
+                    print(f"Context {context}: {len(embeddings_list)} valid proteins")
+
+            if len(all_embeddings) < 2:
+                raise ValueError(f"Only {len(all_embeddings)} total embeddings found. Need at least 2.")
+
+            print(f"Total training samples across all contexts: {len(all_embeddings)}")
             
             # Use suggested parameters if user hasn't overridden them
             batch_size = config.batch_size if hasattr(config, 'batch_size') and config.batch_size else suggestions.get("batch_size", 32)
@@ -290,7 +322,7 @@ class TrainingService:
             pos_weight = suggestions.get("pos_weight", 1.0) if use_class_weights else None
             
             # Create dataset and dataloader
-            dataset = ProteinDataset(embeddings_list, valid_labels)
+            dataset = ProteinDataset(all_embeddings, all_labels)
             dataloader = DataLoader(
                 dataset, 
                 batch_size=min(batch_size, len(dataset)), 
@@ -389,11 +421,61 @@ class TrainingService:
                 
                 await asyncio.sleep(0.01)
             
+            # CALCULATE GENE IMPORTANCE AFTER TRAINING COMPLETES
+            # Check for both old single context and new multi-context
+            contexts_to_analyze = []
+            # Get unique proteins that were actually used in training
+            unique_training_proteins = list(set(all_valid_proteins))
+            
+            # Get config dict to check for selected_contexts
+            config_dict = config.dict()
+            
+            # Handle multi-select contexts
+            if 'selected_contexts' in config_dict and config_dict['selected_contexts']:
+                contexts_to_analyze = config_dict['selected_contexts']
+                print(f"Found selected_contexts: {contexts_to_analyze}")
+            # Fall back to single context for backward compatibility
+            elif config.context:
+                contexts_to_analyze = [config.context]
+                print(f"Using single context: {config.context}")
+            
+    
+            if contexts_to_analyze:
+                context_importance = {}
+                
+                for context in contexts_to_analyze:
+                    # Get embeddings for proteins in this specific context
+                    context_id = self.data_service.parse_context(context)
+                    
+                    # Get embeddings for the proteins that were used in training
+                    context_embeddings, valid_indices = self.data_service.get_embeddings_for_proteins(
+                        unique_training_proteins, context_id
+                    )
+                    
+                    # Get the valid proteins for this context
+                    valid_proteins = [unique_training_proteins[i] for i in valid_indices]
+        
+                    # Calculate importance with context-specific embeddings
+                    importance_data = self.calculate_gene_importance(
+                        model, 
+                        protein_names=valid_proteins,
+                        context_names=[context],
+                        embeddings=context_embeddings  # Pass the context-specific embeddings!
+                    )
+        
+                    context_importance[context] = importance_data
+                
+                # Store in job results
+                self.jobs[job_id]["gene_importance"] = context_importance
+                print(f"Gene importance calculated for contexts: {contexts_to_analyze}")
+            else:
+                print("No contexts found for gene importance calculation")
+            
             # Save trained model
             model_id = f"model_{job_id}"
             self.trained_models[model_id] = {
                 'model': model,
-                'context_id': context_id,
+                'contexts_used': contexts_to_use,
                 'hyperparameters': {
                     'batch_size': batch_size,
                     'learning_rate': learning_rate,
@@ -412,13 +494,83 @@ class TrainingService:
             self.jobs[job_id]["actual_epochs"] = epoch + 1
             
             print(f"Training completed for job {job_id}, final loss: {avg_loss:.4f}")
-            
+        
         except Exception as e:
             self.jobs[job_id]["status"] = "failed"
             self.jobs[job_id]["error"] = str(e)
             print(f"Training error for job {job_id}: {e}")
             import traceback
             traceback.print_exc()
+    
+    def calculate_gene_importance(self, model, protein_names, context_names=None, embeddings=None):
+        """
+        Calculate gene importance scores from trained MLP
+        Using interaction between model weights and context-specific embeddings
+        """
+        # Get first layer - handle both Sequential and single layer models
+        if isinstance(model, nn.Sequential):
+            first_layer = None
+            for layer in model:
+                if isinstance(layer, nn.Linear):
+                    first_layer = layer
+                    break
+        else:
+            first_layer = model
+        
+        if first_layer is None:
+            return {'protein_scores': {}, 'ranked_proteins': []}
+        
+        # Get weights
+        first_layer_weights = first_layer.weight.data.cpu().numpy()  # shape: (hidden_units, input_dim)
+        
+        # If embeddings provided, calculate context-specific importance
+        if embeddings is not None:
+            # embeddings should be shape: (n_proteins, input_dim)
+            if not isinstance(embeddings, np.ndarray):
+                embeddings = embeddings.cpu().numpy() if hasattr(embeddings, 'cpu') else np.array(embeddings)
+            
+            # Calculate importance as the magnitude of activation for each protein
+            # This captures how strongly each protein's embedding activates the first layer
+            importance_scores = []
+            for i in range(len(protein_names)):
+                if i < len(embeddings):
+                    # Get this protein's embedding
+                    protein_embedding = embeddings[i]
+                    
+                    # Calculate how this embedding interacts with the model weights
+                    # This is the pre-activation values for this protein
+                    activation = np.abs(first_layer_weights @ protein_embedding)
+                    
+                    # Take mean activation across all hidden units
+                    importance = activation.mean()
+                    importance_scores.append(importance)
+                else:
+                    importance_scores.append(0.0)
+            
+            importance_scores = np.array(importance_scores)
+        else:
+            # Fallback to weight-only importance (your original method)
+            importance_scores = np.abs(first_layer_weights).mean(axis=0)
+        
+        # Normalize to 0-1 range
+        if importance_scores.max() > importance_scores.min():
+            importance_scores = (importance_scores - importance_scores.min()) / (importance_scores.max() - importance_scores.min())
+        else:
+            importance_scores = np.ones_like(importance_scores) * 0.5
+        
+        # Create protein-score mapping
+        protein_importance = {}
+        for idx, protein in enumerate(protein_names):
+            if idx < len(importance_scores):
+                protein_importance[protein] = float(importance_scores[idx])
+        
+        # Sort by importance
+        sorted_proteins = sorted(protein_importance.items(), key=lambda x: x[1], reverse=True)
+        
+        return {
+            'protein_scores': protein_importance,
+            'ranked_proteins': sorted_proteins
+        }
     
     def get_job(self, job_id: str) -> dict:
         """Get job status"""

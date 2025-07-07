@@ -1,4 +1,4 @@
-const API_BASE = '/api';
+const API_BASE = 'http://localhost:8000';
 
 export const api = {
   async fetchContexts() {
@@ -82,4 +82,14 @@ export const api = {
     if (!response.ok) throw new Error('Failed to analyze dataset');
     return response.json();
   },
+
+  async fetchPPIGraph(context) {
+  const response = await fetch(`${API_BASE}/graph/ppi/${encodeURIComponent(context)}`);
+  
+  if (!response.ok) {
+    throw new Error('Failed to fetch PPI graph');
+  }
+  
+  return response.json();
+},
 };

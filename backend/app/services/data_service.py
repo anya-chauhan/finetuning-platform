@@ -44,9 +44,8 @@ class DataService:
             labels_dict = json.loads(labels_dict)
             
             # Extract CCI cell types
-            celltypes = [c for c in labels_dict["Cell Type"] if c.startswith("CCI")]
-            celltype_names = [ct.split("CCI_")[1] for ct in celltypes]
-            celltype_dict = {name: i for i, name in enumerate(celltype_names)}
+            celltypes = list(set(labels_dict["Cell Type"]))
+            celltype_dict = {name: i for i, name in enumerate(celltypes)}
 
             # Create context ID to name mapping
             self.context_names_map = {i: name for name, i in celltype_dict.items()}
@@ -67,7 +66,7 @@ class DataService:
                 protein_celltypes.append(c)
             
             print(f"Found {len(protein_names)} protein cell type associations")
-            print(f"Found {len(celltypes)} CCI cell types")
+            print(f"Found {len(celltypes)} cell types")
             
             # Build celltype_protein_dict
             proteins = pd.DataFrame.from_dict({"target": protein_names, "cell type": protein_celltypes})
@@ -79,7 +78,7 @@ class DataService:
 
             # Debug info
             print("\nAnalyzing context-protein relationships:")
-            for i in range(min(3, len(self.context_ids))):
+            for i in range(min(35, len(self.context_ids))):
                 context_id = self.context_ids[i]
                 context_name = self.context_names_map.get(context_id, f"unknown_{context_id}")
                 embeddings_shape = embed_data[context_id].shape

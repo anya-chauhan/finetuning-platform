@@ -1,0 +1,2300 @@
+mic.1	end.7
+L5 IT	mic.0
+L5 6 NP	L5 IT
+astR2	mic.1
+L6 IT Car3	mic.11
+mic.11	end.3
+L6 IT Car3	L2 3 IT
+Vip	mic.1
+L6 IT	IFG PFC L4 RMST
+mic.11	mic.0
+L6 IT	CD8 T
+mic.8	Chandelier
+end.3	Chandelier
+astMet	mic.1
+mic.11	Sst
+end.6	L6 IT Car3
+other T	mic.9
+astR0	Sst
+L6 IT Car3	mic.5
+Pvalb	L6b
+astR0	end.4
+mic.9	mic.7
+end.5	IFG PFC L4 RMST
+Sncg	L6 IT Car3
+mic.10	L6 IT
+end.5	CD8 T
+mic.6	CD4 T
+mic.1	Lamp5
+IFG PFC L4 RMST	CD4 T
+other T	astH0
+Pax6	mic.7
+astR0	astR0
+Chandelier	L6 IT
+Pvalb	mic.8
+L6b	Pax6
+mic.1	astR1
+astR2	L5 6 NP
+astIM	Lamp5 Lhx6
+CD8 T	astR2
+L5 IT	astIM
+Lamp5 Lhx6	end.4
+mic.7	Chandelier
+Vip	L5 6 NP
+L6 IT	mic.6
+astIM	L4 IT
+astR1	IFG PFC L4 RMST
+astR1	CD8 T
+astH0	mic.5
+mic.11	astIM
+CD8 T	astTinf
+Lamp5	mic.3
+mic.0	L5 IT
+Vip	end.0
+end.6	end.1
+CD8 T	end.3
+L5 6 NP	end.6
+Lamp5	IFG PFC L4 RMST
+Lamp5 Lhx6	astR1
+end.1	astMet
+L6 IT Car3	L6 IT Car3
+CD8 T	mic.0
+Sncg	end.1
+Lamp5	CD8 T
+end.2	Lamp5 Lhx6
+end.1	L6 CT
+CD8 T	Sst
+L6 IT	mic.9
+end.7	end.5
+Sst	mic.0
+Sst	NK
+CD4 T	mic.6
+astR1	mic.6
+mic.1	mic.1
+NK	mic.7
+mic.9	Vip
+L6 IT	astH0
+Pvalb	end.7
+L5 6 NP	end.4
+Pax6	Vip
+Sst	end.7
+end.5	astH0
+L6b	CD8 T.4
+CD8 T	astIM
+Lamp5 Lhx6	mic.1
+CD4 T	mic.9
+mic.4	CD8 T
+astR1	mic.9
+mic.0	end.6
+L5 6 NP	astR0
+L5 6 NP	astR1
+mic.5	astMet
+astTinf	L4 IT
+end.4	Pvalb
+mic.0	astR2
+Pvalb	Lamp5
+L2 3 IT	mic.6
+mic.6	L4 IT
+mic.8	end.2
+mic.1	L5 6 NP
+mic.3	Pvalb
+end.3	end.2
+IFG PFC L4 RMST	L4 IT
+astIM	Chandelier
+mic.5	L6 CT
+Sst	Lamp5
+astR1	astH0
+astR0	end.0
+mic.0	astTinf
+Pvalb	astR1
+mic.9	CD4 T
+L6 CT	IFG PFC L4 RMST
+mic.10	astR2
+L6 IT Car3	end.5
+mic.0	end.3
+L6 CT	CD8 T
+mic.7	Pvalb
+Lamp5	astH0
+end.6	L5 IT
+mic.0	mic.0
+mic.4	mic.6
+end.7	mic.8
+CD8 T.4	L6b
+Lamp5 Lhx6	L5 6 NP
+mic.9	Sncg
+L2 3 IT	mic.9
+Pax6	CD4 T
+mic.0	Sst
+Sncg	L5 IT
+NK	Vip
+Lamp5 Lhx6	end.0
+mic.10	end.3
+end.2	astMet
+Pax6	Sncg
+mic.10	mic.0
+end.2	L6 CT
+CD8 T.4	mic.8
+mic.10	NK
+end.1	end.2
+end.4	mic.10
+L5 IT	mic.7
+mic.3	mic.10
+astH0	end.5
+mic.4	mic.9
+Chandelier	mic.0
+L6 CT	mic.6
+Chandelier	NK
+Pvalb	mic.1
+mic.0	astIM
+mic.10	end.7
+mic.7	mic.10
+mic.4	astH0
+astMet	CD4 T
+astR2	Sncg
+astR2	other T
+L6 IT Car3	L5 IT
+astTinf	Chandelier
+Chandelier	end.7
+astR2	mic.3
+mic.6	Chandelier
+astMet	Sncg
+NK	CD4 T
+L6 CT	mic.9
+IFG PFC L4 RMST	Chandelier
+mic.10	astIM
+end.6	end.6
+Vip	mic.3
+astMet	other T
+end.0	mic.11
+end.0	L2 3 IT
+end.4	Pax6
+astR2	IFG PFC L4 RMST
+mic.3	Pax6
+astMet	mic.3
+Sncg	end.6
+end.6	astR2
+mic.10	Lamp5
+Vip	IFG PFC L4 RMST
+L5 6 NP	end.0
+NK	Sncg
+Vip	CD8 T
+Lamp5	astMet
+L6 CT	astH0
+Pvalb	L5 6 NP
+end.0	mic.5
+Lamp5	L6 CT
+end.6	astTinf
+CD8 T.4	end.7
+end.7	end.4
+Chandelier	Lamp5
+CD4 T	Chandelier
+astH0	L6b
+mic.9	Lamp5 Lhx6
+mic.7	Pax6
+Sncg	astTinf
+end.6	end.3
+mic.9	L4 IT
+CD8 T	mic.7
+L5 IT	Vip
+astIM	end.2
+Pax6	Lamp5 Lhx6
+end.6	Sst
+end.7	astR0
+astH0	mic.8
+end.7	astR1
+Sst	mic.7
+Pax6	L4 IT
+Sncg	Sst
+mic.8	mic.5
+CD8 T.4	Lamp5
+end.3	mic.5
+L6 IT Car3	end.6
+L4 IT	CD8 T
+end.6	astR0
+CD8 T.4	astR1
+end.0	L6 IT Car3
+Sncg	astR0
+end.4	CD8 T.4
+L6b	L6b
+mic.3	CD8 T.4
+end.6	astIM
+mic.1	other T
+other T	mic.10
+end.1	L2 3 IT
+astMet	Lamp5 Lhx6
+mic.1	mic.3
+Sncg	astIM
+L5 IT	CD4 T
+L6b	mic.8
+L4 IT	mic.6
+mic.7	CD8 T.4
+end.1	mic.5
+mic.1	IFG PFC L4 RMST
+L6 IT Car3	end.4
+astR0	CD8 T
+NK	Lamp5 Lhx6
+Vip	astH0
+astTinf	Pvalb
+mic.6	Pvalb
+NK	L4 IT
+IFG PFC L4 RMST	Pvalb
+L6 IT Car3	astR0
+CD8 T.4	mic.1
+mic.9	Chandelier
+astTinf	end.2
+L6 IT Car3	astR1
+Sst	Vip
+mic.6	end.2
+Lamp5 Lhx6	IFG PFC L4 RMST
+IFG PFC L4 RMST	end.2
+L4 IT	mic.9
+Lamp5 Lhx6	CD8 T
+CD4 T	Pvalb
+astH0	end.4
+Pax6	Chandelier
+mic.11	mic.6
+L6b	NK
+astR0	mic.6
+end.7	L5 6 NP
+mic.10	mic.7
+L4 IT	astH0
+L6 IT	mic.10
+mic.5	mic.11
+mic.5	L2 3 IT
+end.1	L6 IT Car3
+end.7	end.0
+end.0	end.5
+astH0	astR1
+Chandelier	mic.7
+other T	mic.4
+end.5	mic.10
+CD8 T.4	L5 6 NP
+L6b	end.7
+end.4	L6 IT
+mic.11	mic.9
+mic.3	L6 IT
+astR0	mic.9
+mic.5	mic.4
+Sst	CD4 T
+astIM	mic.5
+astR2	astMet
+L2 3 IT	Pvalb
+astR2	L6 CT
+Vip	astMet
+Vip	L6 CT
+CD4 T	mic.10
+astR0	astH0
+L5 6 NP	IFG PFC L4 RMST
+mic.8	end.5
+end.3	end.5
+mic.7	L6 IT
+astR1	mic.10
+Sst	Sncg
+L6b	Lamp5
+astMet	astMet
+end.2	mic.11
+Pvalb	other T
+end.2	L2 3 IT
+L5 6 NP	CD8 T
+L5 IT	Lamp5 Lhx6
+astMet	L6 CT
+NK	Chandelier
+Sst	other T
+Pvalb	mic.3
+L5 IT	L4 IT
+astTinf	Pax6
+mic.6	Pax6
+mic.4	Pvalb
+Pvalb	IFG PFC L4 RMST
+end.2	mic.5
+end.5	mic.11
+astH0	mic.1
+mic.5	L6 IT Car3
+Lamp5 Lhx6	astH0
+L6 IT Car3	L5 6 NP
+end.0	L5 IT
+mic.10	Vip
+L6 IT	mic.4
+L6 IT Car3	end.0
+CD8 T	mic.9
+L5 6 NP	mic.6
+L2 3 IT	mic.10
+CD4 T	Pax6
+Chandelier	Vip
+end.1	end.5
+end.5	mic.4
+mic.9	end.2
+mic.8	L6b
+end.3	L6b
+astH0	L5 6 NP
+Lamp5	mic.11
+L6b	mic.1
+mic.4	mic.10
+end.2	L6 IT Car3
+L5 6 NP	mic.9
+Pax6	end.2
+astH0	end.0
+mic.5	end.1
+astR1	mic.4
+mic.8	mic.8
+end.3	mic.8
+astTinf	CD8 T.4
+mic.1	astMet
+CD8 T	L4 IT
+mic.6	CD8 T.4
+mic.10	CD4 T
+L2 3 IT	Pax6
+mic.1	L6 CT
+IFG PFC L4 RMST	CD8 T.4
+Sst	Lamp5 Lhx6
+L5 6 NP	astH0
+end.0	end.6
+Lamp5	mic.4
+Sst	L4 IT
+mic.7	L6b
+mic.10	Sncg
+Chandelier	CD4 T
+L5 IT	Chandelier
+other T	L6 IT
+mic.0	mic.6
+mic.10	other T
+L6 CT	mic.10
+end.4	astR2
+mic.11	Chandelier
+Lamp5 Lhx6	astMet
+mic.5	end.5
+mic.3	astR2
+Lamp5 Lhx6	L6 CT
+CD4 T	CD8 T.4
+Chandelier	Sncg
+mic.4	Pax6
+Chandelier	other T
+L6 IT	end.1
+astIM	end.5
+end.4	end.3
+end.1	mic.8
+mic.0	mic.9
+NK	end.2
+mic.3	end.3
+end.4	mic.0
+end.5	end.1
+end.4	NK
+mic.3	mic.0
+end.0	end.4
+end.7	IFG PFC L4 RMST
+mic.3	NK
+end.7	CD8 T
+CD8 T.4	other T
+CD8 T.4	mic.3
+end.0	astR0
+end.2	end.5
+L2 3 IT	CD8 T.4
+end.0	astR1
+mic.7	NK
+CD8 T.4	IFG PFC L4 RMST
+end.4	end.7
+L6 IT	L6 IT
+mic.3	end.7
+mic.8	end.4
+CD8 T	Chandelier
+end.3	end.4
+mic.5	L5 IT
+L4 IT	Pvalb
+L6 CT	mic.4
+end.4	astIM
+Lamp5	end.1
+mic.7	end.7
+mic.3	astIM
+mic.10	Lamp5 Lhx6
+astIM	L6b
+Pvalb	astMet
+end.4	Lamp5
+mic.8	astR1
+mic.10	L4 IT
+Pvalb	L6 CT
+end.3	astR1
+mic.3	Lamp5
+mic.9	mic.5
+Chandelier	Lamp5 Lhx6
+end.6	mic.6
+CD4 T	L6 IT
+astR1	L6 IT
+Chandelier	L4 IT
+mic.9	CD8 T.4
+astIM	mic.8
+L5 IT	Pvalb
+Sncg	mic.6
+Pax6	mic.5
+mic.7	Lamp5
+L6 IT Car3	IFG PFC L4 RMST
+end.2	L5 IT
+L6 IT Car3	CD8 T
+mic.11	Pvalb
+end.1	end.4
+L5 IT	end.2
+astR2	mic.11
+L4 IT	mic.10
+end.7	astH0
+astR2	L2 3 IT
+other T	astR2
+end.6	mic.9
+Vip	L2 3 IT
+end.1	astR0
+mic.5	end.6
+Sncg	mic.9
+end.1	astR1
+astH0	mic.3
+astMet	mic.11
+mic.8	mic.1
+other T	astTinf
+astMet	L2 3 IT
+end.3	mic.1
+L2 3 IT	L6 IT
+astH0	IFG PFC L4 RMST
+other T	end.3
+astH0	CD8 T
+end.0	L5 6 NP
+other T	mic.0
+L6 IT Car3	mic.6
+astMet	mic.5
+mic.5	astTinf
+mic.0	Chandelier
+other T	Sst
+Vip	mic.4
+end.0	end.0
+L6b	CD4 T
+L6 CT	end.1
+mic.11	mic.10
+astTinf	L6b
+NK	mic.5
+mic.6	L6b
+astR0	mic.10
+L4 IT	Pax6
+mic.4	L6 IT
+IFG PFC L4 RMST	L6b
+L6b	Sncg
+Lamp5	L5 IT
+mic.5	Sst
+mic.7	mic.1
+mic.10	Chandelier
+CD8 T	Pvalb
+NK	CD8 T.4
+end.2	end.6
+L6b	other T
+mic.8	L5 6 NP
+end.3	L5 6 NP
+L6 IT Car3	mic.9
+L6b	mic.3
+astTinf	mic.8
+L6 IT	astR2
+mic.6	mic.8
+IFG PFC L4 RMST	mic.8
+CD8 T	end.2
+astIM	end.4
+mic.8	end.0
+end.3	end.0
+astR2	L6 IT Car3
+mic.5	astR0
+Vip	L6 IT Car3
+other T	astIM
+L6 IT	astTinf
+L6 IT Car3	astH0
+end.5	astR2
+L6 CT	L6 IT
+astMet	L6 IT Car3
+Sst	end.2
+L6 IT	end.3
+mic.11	Pax6
+astR0	Pax6
+L6 IT	mic.0
+astIM	astR1
+end.5	astTinf
+mic.1	mic.11
+end.4	mic.7
+mic.1	L2 3 IT
+L6 IT	Sst
+end.2	end.4
+mic.3	mic.7
+end.5	end.3
+CD8 T.4	astMet
+end.5	mic.0
+end.1	L5 6 NP
+astTinf	NK
+mic.6	NK
+astR1	astR2
+CD8 T.4	L6 CT
+IFG PFC L4 RMST	NK
+end.5	Sst
+astH0	astH0
+end.2	astR0
+L4 IT	CD8 T.4
+end.1	end.0
+astR2	end.1
+Lamp5	end.6
+mic.7	mic.7
+end.2	astR1
+Lamp5 Lhx6	mic.11
+astR1	astTinf
+Vip	end.1
+astR0	mic.4
+mic.1	mic.4
+Lamp5	astR2
+astR1	end.3
+astTinf	end.7
+mic.6	end.7
+end.6	Chandelier
+IFG PFC L4 RMST	end.7
+astR1	mic.0
+CD4 T	NK
+L5 6 NP	mic.10
+L6 IT	astIM
+L5 IT	mic.5
+L6b	Lamp5 Lhx6
+Lamp5	astTinf
+astR1	Sst
+astIM	mic.1
+mic.0	Pvalb
+L5 IT	CD8 T.4
+Lamp5	end.3
+CD8 T	Pax6
+Lamp5 Lhx6	mic.4
+L2 3 IT	astR2
+end.5	astIM
+Lamp5	mic.0
+astR2	end.5
+mic.11	CD8 T.4
+Lamp5	Sst
+astTinf	Lamp5
+CD4 T	end.7
+mic.6	Lamp5
+mic.1	L6 IT Car3
+IFG PFC L4 RMST	Lamp5
+astMet	end.5
+mic.9	L6b
+end.4	Vip
+L2 3 IT	end.3
+mic.3	Vip
+L2 3 IT	mic.0
+mic.4	astR2
+mic.10	end.2
+Lamp5	astR0
+IFG PFC L4 RMST	astR1
+L2 3 IT	NK
+mic.5	end.0
+astR1	astIM
+Pax6	L6b
+astIM	L5 6 NP
+mic.9	mic.8
+CD4 T	Lamp5
+Chandelier	end.2
+mic.7	Vip
+astH0	astMet
+mic.0	mic.10
+astIM	end.0
+astH0	L6 CT
+mic.4	end.3
+Lamp5	astIM
+Pvalb	mic.11
+Pvalb	L2 3 IT
+mic.4	mic.0
+L2 3 IT	end.7
+Pax6	mic.8
+mic.4	NK
+L4 IT	L6 IT
+mic.1	end.1
+L6 CT	astR2
+end.0	IFG PFC L4 RMST
+end.2	L5 6 NP
+L5 6 NP	mic.4
+astR2	L5 IT
+end.0	CD8 T
+other T	mic.7
+CD8 T	CD8 T.4
+Vip	L5 IT
+Sst	mic.5
+L6 CT	astTinf
+end.2	end.0
+end.4	CD4 T
+astTinf	mic.1
+mic.6	mic.1
+astMet	L5 IT
+mic.3	CD4 T
+IFG PFC L4 RMST	mic.1
+Pvalb	mic.4
+L6 CT	end.3
+L2 3 IT	Lamp5
+mic.8	mic.3
+Lamp5 Lhx6	end.1
+end.3	mic.3
+L6 CT	mic.0
+end.4	Sncg
+mic.0	Pax6
+mic.3	Sncg
+end.4	other T
+L6 CT	Sst
+end.6	Pvalb
+L6b	astMet
+NK	L6b
+mic.8	IFG PFC L4 RMST
+mic.3	other T
+end.3	IFG PFC L4 RMST
+L6b	L6 CT
+mic.7	CD4 T
+mic.1	end.5
+mic.11	L6 IT
+mic.4	astIM
+astR0	L6 IT
+Sncg	Pvalb
+mic.9	end.7
+end.0	mic.6
+mic.7	Sncg
+NK	mic.8
+mic.7	other T
+Pvalb	L6 IT Car3
+mic.6	L5 6 NP
+Pax6	end.7
+mic.7	mic.3
+IFG PFC L4 RMST	L5 6 NP
+L6 IT	mic.7
+astR2	end.6
+L6 CT	astIM
+mic.9	Lamp5
+end.0	mic.9
+Vip	end.6
+other T	Vip
+end.1	IFG PFC L4 RMST
+astMet	end.6
+end.5	mic.7
+end.1	CD8 T
+end.6	mic.10
+Pax6	Lamp5
+mic.9	astR1
+end.0	astH0
+Sncg	mic.10
+Vip	astTinf
+mic.1	L5 IT
+mic.0	CD8 T.4
+Pax6	astR1
+Pvalb	end.1
+mic.10	mic.5
+astR2	Sst
+CD4 T	mic.7
+end.7	mic.11
+astR1	mic.7
+astR2	end.4
+end.4	Lamp5 Lhx6
+Vip	Sst
+NK	end.7
+mic.3	Lamp5 Lhx6
+Lamp5 Lhx6	L5 IT
+end.4	L4 IT
+Chandelier	mic.5
+L5 IT	L6b
+mic.3	L4 IT
+astMet	end.4
+L4 IT	astR2
+end.6	Pax6
+L5 6 NP	L6 IT
+astR2	astR0
+CD8 T.4	mic.11
+mic.11	L6b
+CD8 T.4	L2 3 IT
+Vip	astR0
+other T	CD4 T
+Sncg	Pax6
+mic.7	Lamp5 Lhx6
+mic.9	mic.1
+L6 IT Car3	mic.10
+end.7	mic.4
+Pvalb	end.5
+astMet	astR0
+L6 IT	Vip
+mic.7	L4 IT
+L5 IT	mic.8
+NK	Lamp5
+astMet	astR1
+Sst	end.5
+L4 IT	end.3
+mic.5	CD8 T
+astIM	mic.3
+L4 IT	mic.0
+Pax6	mic.1
+L2 3 IT	mic.7
+L4 IT	NK
+astIM	IFG PFC L4 RMST
+CD8 T.4	mic.4
+NK	astR1
+mic.1	end.6
+astR0	astR2
+end.1	astH0
+L4 IT	end.7
+mic.4	mic.7
+mic.9	L5 6 NP
+astR0	astTinf
+mic.1	astTinf
+CD4 T	Vip
+L5 IT	NK
+astR1	Vip
+mic.5	mic.6
+Lamp5 Lhx6	end.6
+mic.0	L6 IT
+end.2	IFG PFC L4 RMST
+astR0	end.3
+end.2	CD8 T
+CD8 T	L6b
+mic.11	NK
+astR0	mic.0
+Pax6	L5 6 NP
+Lamp5 Lhx6	astR2
+end.6	CD8 T.4
+L4 IT	astIM
+CD8 T.4	L6 IT Car3
+Pvalb	L5 IT
+mic.1	Sst
+mic.1	end.4
+mic.8	astMet
+Sncg	CD8 T.4
+end.3	astMet
+Sst	L6b
+Lamp5 Lhx6	astTinf
+L4 IT	Lamp5
+end.4	Chandelier
+mic.8	L6 CT
+L5 IT	end.7
+astTinf	CD4 T
+end.3	L6 CT
+mic.3	Chandelier
+NK	mic.1
+L6 CT	mic.7
+L6 IT Car3	mic.4
+mic.5	mic.9
+Lamp5 Lhx6	end.3
+mic.11	end.7
+astH0	mic.11
+Lamp5 Lhx6	mic.0
+astTinf	Sncg
+mic.1	astR0
+astH0	L2 3 IT
+mic.6	Sncg
+end.7	end.1
+astTinf	other T
+IFG PFC L4 RMST	Sncg
+Lamp5 Lhx6	Sst
+L2 3 IT	Vip
+mic.6	other T
+Sst	mic.8
+end.2	mic.6
+IFG PFC L4 RMST	other T
+astTinf	mic.3
+mic.6	mic.3
+mic.5	astH0
+IFG PFC L4 RMST	mic.3
+astR2	end.0
+L5 IT	Lamp5
+CD4 T	CD4 T
+astMet	L5 6 NP
+astR1	CD4 T
+astR0	astIM
+mic.7	astMet
+other T	L4 IT
+mic.10	end.5
+mic.7	L6 CT
+end.5	mic.6
+CD8 T.4	end.1
+mic.11	Lamp5
+Lamp5 Lhx6	astR0
+astH0	mic.4
+astMet	end.0
+CD4 T	Sncg
+L5 IT	astR1
+mic.4	Vip
+NK	L5 6 NP
+CD4 T	other T
+CD8 T	NK
+Chandelier	end.5
+L5 6 NP	astR2
+end.2	mic.9
+Lamp5 Lhx6	astIM
+Pvalb	end.6
+L5 6 NP	astTinf
+L6b	L2 3 IT
+end.5	mic.9
+end.2	astH0
+L5 6 NP	end.3
+CD8 T	end.7
+L2 3 IT	CD4 T
+mic.0	L6b
+CD8 T.4	end.5
+L5 6 NP	mic.0
+L6b	mic.5
+L6 CT	Vip
+astH0	L6 IT Car3
+Pvalb	astTinf
+end.6	L6 IT
+L5 6 NP	Sst
+Lamp5	mic.6
+L2 3 IT	Sncg
+Sncg	L6 IT
+L2 3 IT	other T
+L6 IT Car3	end.1
+mic.10	L6b
+L5 IT	mic.1
+L6 IT	L4 IT
+mic.4	CD4 T
+Pvalb	Sst
+CD8 T	Lamp5
+astTinf	Lamp5 Lhx6
+Pvalb	end.4
+mic.6	Lamp5 Lhx6
+mic.11	mic.1
+IFG PFC L4 RMST	Lamp5 Lhx6
+Sst	end.4
+Chandelier	L6b
+end.5	L4 IT
+mic.4	Sncg
+end.7	L5 IT
+Lamp5	mic.9
+mic.10	mic.8
+Pvalb	astR0
+other T	Chandelier
+mic.1	end.0
+L5 6 NP	astIM
+astIM	astMet
+end.4	end.2
+astIM	L6 CT
+astH0	end.1
+mic.3	end.2
+L6b	L6 IT Car3
+Chandelier	mic.8
+Sst	astR1
+L4 IT	mic.7
+CD4 T	Lamp5 Lhx6
+L6 IT Car3	L6 IT
+CD8 T.4	L5 IT
+mic.0	NK
+CD4 T	L4 IT
+L5 IT	L5 6 NP
+astR1	L4 IT
+mic.9	other T
+mic.7	end.2
+mic.9	mic.3
+end.0	mic.10
+Pax6	other T
+mic.9	IFG PFC L4 RMST
+mic.0	end.7
+Pax6	mic.3
+CD8 T	mic.1
+mic.11	mic.7
+Pax6	IFG PFC L4 RMST
+L2 3 IT	Lamp5 Lhx6
+astR0	mic.7
+Sst	mic.1
+end.7	end.6
+L2 3 IT	L4 IT
+L6 IT	Chandelier
+end.7	astR2
+mic.0	Lamp5
+end.5	Chandelier
+mic.4	Lamp5 Lhx6
+CD8 T.4	end.6
+end.7	astTinf
+mic.10	end.4
+L4 IT	Vip
+astTinf	astMet
+L5 IT	end.3
+mic.4	L4 IT
+astR2	CD8 T
+mic.6	astMet
+astTinf	L6 CT
+IFG PFC L4 RMST	astMet
+end.7	end.3
+mic.6	L6 CT
+L6b	end.5
+IFG PFC L4 RMST	L6 CT
+end.7	mic.0
+NK	other T
+Sncg	astR2
+Chandelier	end.4
+astMet	IFG PFC L4 RMST
+astMet	CD8 T
+end.7	Sst
+CD8 T.4	astTinf
+Sst	L5 6 NP
+NK	mic.3
+astH0	L5 IT
+mic.10	astR1
+astR1	Chandelier
+Pvalb	end.0
+other T	Pvalb
+end.0	mic.4
+NK	IFG PFC L4 RMST
+Sst	end.0
+mic.8	mic.11
+end.6	mic.0
+end.3	mic.11
+mic.8	L2 3 IT
+end.3	L2 3 IT
+Sncg	end.3
+end.6	NK
+Chandelier	astR1
+L6 CT	L4 IT
+CD8 T.4	Sst
+Sncg	mic.0
+Lamp5	Chandelier
+CD8 T.4	end.4
+mic.11	Vip
+mic.5	Pvalb
+other T	end.2
+Sncg	NK
+astR2	mic.6
+astR0	Vip
+Vip	mic.6
+mic.0	mic.1
+astMet	mic.6
+L4 IT	CD4 T
+end.7	astIM
+end.6	end.7
+CD8 T.4	astR0
+mic.8	mic.4
+L6 IT Car3	astR2
+end.3	mic.4
+L5 6 NP	mic.7
+end.4	mic.5
+mic.3	mic.5
+L2 3 IT	Chandelier
+Sncg	end.7
+mic.7	L2 3 IT
+L6b	L5 IT
+L4 IT	Sncg
+mic.10	mic.1
+L6 IT Car3	astTinf
+astR2	mic.9
+L4 IT	other T
+end.1	mic.11
+Vip	mic.9
+L6 IT Car3	end.3
+mic.7	mic.5
+Chandelier	mic.1
+L6 IT Car3	mic.0
+astH0	end.6
+astMet	mic.9
+end.6	Lamp5
+L6 IT	Pvalb
+mic.4	Chandelier
+astR2	astH0
+L6 IT Car3	Sst
+mic.5	mic.10
+Sncg	Lamp5
+mic.11	CD4 T
+mic.1	CD8 T
+mic.8	L6 IT Car3
+end.3	L6 IT Car3
+astR0	CD4 T
+L5 IT	Sncg
+end.5	Pvalb
+CD8 T	Vip
+L6 IT	end.2
+astMet	astH0
+L5 IT	other T
+end.1	mic.4
+astH0	astTinf
+mic.11	Sncg
+L5 IT	mic.3
+end.0	end.1
+mic.11	other T
+mic.10	L5 6 NP
+end.5	end.2
+mic.0	mic.7
+mic.11	mic.3
+L5 IT	IFG PFC L4 RMST
+other T	Pax6
+L6 CT	Chandelier
+mic.10	end.0
+mic.9	astMet
+astH0	Sst
+Chandelier	L5 6 NP
+mic.9	L6 CT
+astR1	Pvalb
+L6 IT Car3	astIM
+mic.7	L6 IT Car3
+L5 6 NP	Vip
+mic.1	mic.6
+L6b	end.6
+mic.5	Pax6
+end.2	mic.10
+Chandelier	end.0
+Pax6	astMet
+Pax6	L6 CT
+mic.8	end.1
+CD4 T	end.2
+end.3	end.1
+astR1	end.2
+astH0	astR0
+Lamp5	Pvalb
+end.0	L6 IT
+astIM	mic.11
+L4 IT	Lamp5 Lhx6
+CD8 T	CD4 T
+astIM	L2 3 IT
+Lamp5 Lhx6	mic.6
+L4 IT	L4 IT
+mic.1	mic.9
+CD8 T.4	end.0
+CD8 T	Sncg
+CD8 T	other T
+L6b	end.4
+CD8 T	mic.3
+L6 IT	Pax6
+mic.1	astH0
+astIM	mic.4
+L2 3 IT	end.2
+L5 6 NP	CD4 T
+other T	CD8 T.4
+Lamp5 Lhx6	mic.9
+mic.0	Vip
+end.1	end.1
+Sst	mic.3
+end.4	end.5
+L6b	astR0
+mic.11	Lamp5 Lhx6
+end.5	Pax6
+end.7	mic.7
+NK	astMet
+astR0	Lamp5 Lhx6
+L6b	astR1
+mic.3	end.5
+Lamp5	mic.10
+Pvalb	CD8 T
+mic.11	L4 IT
+NK	L6 CT
+Sst	IFG PFC L4 RMST
+astR0	L4 IT
+mic.5	CD8 T.4
+Sst	CD8 T
+end.2	mic.4
+mic.4	end.2
+mic.7	end.5
+end.6	mic.7
+astIM	L6 IT Car3
+astR1	Pax6
+Sncg	mic.7
+L6 CT	Pvalb
+astTinf	mic.11
+astTinf	L2 3 IT
+mic.6	mic.11
+Pvalb	mic.6
+mic.8	L5 IT
+mic.6	L2 3 IT
+end.3	L5 IT
+IFG PFC L4 RMST	mic.11
+Lamp5	Pax6
+IFG PFC L4 RMST	L2 3 IT
+mic.0	CD4 T
+L6 CT	end.2
+L4 IT	Chandelier
+L6 IT	CD8 T.4
+astTinf	mic.5
+end.4	L6b
+mic.6	mic.5
+CD8 T	Lamp5 Lhx6
+IFG PFC L4 RMST	mic.5
+mic.3	L6b
+mic.0	Sncg
+mic.0	other T
+end.5	CD8 T.4
+CD4 T	L2 3 IT
+mic.0	mic.3
+astIM	end.1
+Pvalb	mic.9
+L6 IT Car3	mic.7
+end.4	mic.8
+mic.3	mic.8
+end.0	astR2
+CD4 T	mic.5
+end.1	L5 IT
+Pvalb	astH0
+mic.10	mic.3
+L5 IT	astMet
+L6b	L5 6 NP
+end.6	Vip
+astR0	Chandelier
+Sst	astH0
+L5 IT	L6 CT
+astR1	CD8 T.4
+L5 6 NP	L4 IT
+end.0	astTinf
+mic.5	L6 IT
+mic.7	mic.8
+end.2	end.1
+mic.10	IFG PFC L4 RMST
+mic.11	astMet
+Sncg	Vip
+L6b	end.0
+Chandelier	mic.3
+mic.11	L6 CT
+end.0	end.3
+astTinf	L6 IT Car3
+mic.8	end.6
+mic.6	L6 IT Car3
+end.3	end.6
+end.0	mic.0
+IFG PFC L4 RMST	L6 IT Car3
+Lamp5	CD8 T.4
+Chandelier	IFG PFC L4 RMST
+Vip	Pvalb
+end.0	Sst
+Chandelier	CD8 T
+Lamp5 Lhx6	Chandelier
+L2 3 IT	mic.5
+L6 CT	Pax6
+mic.8	astTinf
+end.3	astTinf
+end.2	L6 IT
+CD8 T.4	CD8 T
+end.6	CD4 T
+mic.0	Lamp5 Lhx6
+L6 IT Car3	Vip
+mic.8	Sst
+end.3	Sst
+mic.0	L4 IT
+mic.4	mic.5
+end.1	end.6
+mic.6	end.1
+end.0	astIM
+Sncg	CD4 T
+end.5	L6 IT
+IFG PFC L4 RMST	end.1
+end.6	Sncg
+end.7	mic.6
+mic.9	mic.11
+mic.4	CD8 T.4
+astR2	mic.10
+end.1	astR2
+end.4	end.4
+mic.9	L2 3 IT
+end.6	other T
+CD8 T	astMet
+CD8 T	L6 CT
+astIM	L5 IT
+mic.3	end.4
+mic.8	astR0
+Sncg	Sncg
+end.3	astR0
+Sncg	other T
+L4 IT	end.2
+astMet	mic.10
+Sst	astMet
+end.1	astTinf
+other T	L6b
+Pax6	mic.11
+Sst	L6 CT
+Pax6	L2 3 IT
+L5 6 NP	Chandelier
+CD8 T.4	mic.6
+end.1	end.3
+end.4	astR1
+mic.7	end.4
+end.1	mic.0
+mic.3	astR1
+astTinf	end.5
+mic.9	mic.4
+mic.6	end.5
+end.7	mic.9
+IFG PFC L4 RMST	end.5
+end.1	Sst
+L6 CT	CD8 T.4
+other T	mic.8
+astR0	Pvalb
+mic.1	Pvalb
+Chandelier	astH0
+Lamp5	L6 IT
+mic.7	astR0
+astR2	Pax6
+Pax6	mic.4
+mic.7	astR1
+Vip	Pax6
+CD8 T.4	mic.9
+mic.11	end.2
+astR0	end.2
+CD4 T	end.5
+mic.5	astR2
+Lamp5 Lhx6	Pvalb
+mic.9	L6 IT Car3
+CD8 T.4	astH0
+astIM	end.6
+end.7	L4 IT
+end.1	astIM
+end.4	mic.1
+NK	mic.11
+NK	L2 3 IT
+astR2	mic.4
+L6 IT	L6b
+other T	NK
+mic.3	mic.1
+Pax6	L6 IT Car3
+end.6	Lamp5 Lhx6
+mic.5	end.3
+astTinf	L5 IT
+astMet	mic.4
+mic.0	astMet
+mic.6	L5 IT
+mic.5	mic.0
+end.5	L6b
+astIM	astTinf
+IFG PFC L4 RMST	L5 IT
+end.6	L4 IT
+mic.1	mic.10
+Sncg	Lamp5 Lhx6
+mic.5	NK
+mic.0	L6 CT
+L6 IT	mic.8
+Sncg	L4 IT
+other T	end.7
+L2 3 IT	end.5
+NK	mic.4
+end.2	astR2
+mic.10	astMet
+astH0	mic.6
+astIM	Sst
+mic.10	L6 CT
+mic.9	end.1
+end.4	L5 6 NP
+L6b	IFG PFC L4 RMST
+mic.5	end.7
+Lamp5 Lhx6	mic.10
+Vip	CD8 T.4
+CD4 T	L6b
+L6b	CD8 T
+astR1	L6b
+mic.3	L5 6 NP
+end.2	astTinf
+Chandelier	astMet
+Chandelier	L6 CT
+end.4	end.0
+L5 6 NP	Pvalb
+end.2	end.3
+other T	Lamp5
+Pax6	end.1
+mic.3	end.0
+astIM	astR0
+end.2	mic.0
+end.0	mic.7
+mic.1	Pax6
+mic.5	astIM
+Lamp5	L6b
+CD4 T	mic.8
+L6 IT	NK
+mic.7	L5 6 NP
+astH0	mic.9
+astR1	mic.8
+end.2	Sst
+NK	L6 IT Car3
+L5 6 NP	end.2
+Pvalb	Pvalb
+L6 IT Car3	L4 IT
+mic.5	Lamp5
+mic.7	end.0
+L4 IT	mic.5
+mic.9	end.5
+end.5	NK
+astTinf	end.6
+mic.6	end.6
+IFG PFC L4 RMST	end.6
+L6b	mic.6
+end.7	Chandelier
+Lamp5 Lhx6	Pax6
+L2 3 IT	L6b
+L6 IT	end.7
+L5 IT	mic.11
+Pax6	end.5
+L5 IT	L2 3 IT
+astMet	end.1
+mic.11	L2 3 IT
+end.5	end.7
+end.2	astIM
+L2 3 IT	mic.8
+astR1	NK
+Sncg	Chandelier
+mic.4	L6b
+NK	end.1
+mic.11	mic.5
+L6 IT	Lamp5
+other T	mic.1
+astTinf	end.4
+Pvalb	mic.10
+mic.6	end.4
+IFG PFC L4 RMST	Sst
+Lamp5	NK
+IFG PFC L4 RMST	end.4
+mic.0	end.2
+astR0	CD8 T.4
+astR2	L6 IT
+astR1	end.7
+end.5	Lamp5
+L6b	astH0
+mic.4	mic.8
+Vip	L6 IT
+end.0	Vip
+mic.9	L5 IT
+astTinf	astR0
+mic.6	astR0
+astMet	L6 IT
+astTinf	astR1
+IFG PFC L4 RMST	astR0
+mic.6	astR1
+L6 CT	L6b
+Lamp5	end.7
+L5 6 NP	Pax6
+NK	end.5
+Pax6	L5 IT
+CD4 T	end.4
+Lamp5 Lhx6	CD8 T.4
+L6 IT Car3	Chandelier
+L5 IT	L6 IT Car3
+astR1	Lamp5
+other T	L5 6 NP
+CD8 T	L2 3 IT
+L6 CT	mic.8
+Pvalb	Pax6
+mic.11	L6 IT Car3
+CD4 T	astR1
+Sst	mic.11
+Sst	L2 3 IT
+CD8 T	mic.5
+Lamp5	Lamp5
+L6 IT	mic.1
+end.7	Pvalb
+L2 3 IT	end.4
+end.5	mic.1
+mic.4	end.7
+mic.9	end.6
+mic.5	mic.7
+Sst	mic.4
+L5 IT	end.1
+L6 CT	NK
+NK	L5 IT
+L4 IT	end.5
+CD8 T.4	Pvalb
+L2 3 IT	astR1
+mic.8	CD8 T
+end.3	CD8 T
+Pax6	end.6
+end.4	mic.3
+L5 6 NP	CD8 T.4
+mic.1	L6 IT
+mic.3	mic.3
+mic.9	astTinf
+CD4 T	mic.1
+astR1	mic.1
+mic.4	Lamp5
+end.4	IFG PFC L4 RMST
+end.6	end.2
+CD8 T	L6 IT Car3
+mic.3	IFG PFC L4 RMST
+L6 CT	end.7
+Pvalb	CD8 T.4
+astTinf	L5 6 NP
+Sncg	end.2
+Pax6	astTinf
+Sst	L6 IT Car3
+mic.4	astR1
+mic.9	Sst
+L5 IT	end.5
+end.7	mic.10
+mic.9	end.4
+Lamp5 Lhx6	L6 IT
+end.2	mic.7
+astTinf	end.0
+mic.6	end.0
+mic.7	IFG PFC L4 RMST
+mic.11	end.5
+IFG PFC L4 RMST	end.0
+mic.7	CD8 T
+mic.0	L2 3 IT
+mic.8	mic.6
+end.3	mic.6
+astR2	astR2
+Pax6	Sst
+Pax6	end.4
+L6 CT	Lamp5
+Vip	astR2
+mic.9	astR0
+CD8 T.4	mic.10
+CD4 T	L5 6 NP
+L6 IT Car3	Pvalb
+L2 3 IT	mic.1
+mic.0	mic.5
+astR2	astTinf
+astMet	astR2
+mic.10	mic.11
+L4 IT	L6b
+mic.10	L2 3 IT
+NK	end.6
+mic.5	Vip
+CD4 T	end.0
+Pax6	astR0
+astR2	end.3
+astMet	astTinf
+L6 IT Car3	end.2
+astR2	mic.0
+Vip	end.3
+Chandelier	mic.11
+mic.8	mic.9
+Chandelier	L2 3 IT
+end.3	mic.9
+end.7	Pax6
+Sst	end.1
+astMet	end.3
+Vip	NK
+L4 IT	mic.8
+mic.4	mic.1
+end.0	L4 IT
+astMet	mic.0
+NK	astTinf
+mic.10	mic.4
+astH0	Pvalb
+astMet	Sst
+L5 IT	L5 IT
+end.1	mic.6
+mic.8	astH0
+end.3	astH0
+CD8 T.4	Pax6
+L2 3 IT	L5 6 NP
+Lamp5	mic.7
+CD8 T	end.5
+Chandelier	mic.4
+astR0	L6b
+Vip	end.7
+NK	Sst
+mic.0	L6 IT Car3
+NK	end.4
+L2 3 IT	end.0
+end.2	Vip
+L6 CT	mic.1
+Pvalb	L6 IT
+other T	Sncg
+astR2	astIM
+mic.5	CD4 T
+mic.11	mic.8
+other T	other T
+end.1	mic.9
+Vip	astIM
+astR0	mic.8
+mic.4	L5 6 NP
+NK	astR0
+end.5	Vip
+mic.10	L6 IT Car3
+other T	mic.3
+mic.7	astH0
+Lamp5 Lhx6	L6b
+astMet	astIM
+astIM	CD8 T
+Vip	Lamp5
+mic.5	Sncg
+mic.5	other T
+mic.1	astR2
+Chandelier	L6 IT Car3
+astH0	mic.10
+end.7	CD8 T.4
+L6 IT Car3	Pax6
+end.6	mic.5
+L5 IT	end.6
+mic.9	end.0
+mic.1	end.3
+CD8 T	L5 IT
+Sncg	mic.5
+mic.1	mic.0
+L6 IT	CD4 T
+CD8 T.4	CD8 T.4
+astR0	NK
+mic.1	NK
+L4 IT	end.4
+astIM	mic.6
+end.0	Chandelier
+Lamp5	Vip
+mic.10	end.1
+Sst	L5 IT
+Pax6	end.0
+L6 IT	Sncg
+end.5	CD4 T
+L6 IT	other T
+CD8 T	mic.8
+astH0	Pax6
+end.4	astMet
+Chandelier	end.1
+L6 IT	mic.3
+astR0	end.7
+end.4	L6 CT
+mic.3	astMet
+L4 IT	astR1
+mic.0	end.5
+L6b	mic.10
+Lamp5 Lhx6	NK
+end.5	Sncg
+L5 6 NP	L6b
+mic.3	L6 CT
+end.5	other T
+L5 IT	Sst
+astIM	mic.9
+L5 IT	end.4
+end.5	mic.3
+other T	Lamp5 Lhx6
+mic.11	end.4
+mic.1	astIM
+astTinf	IFG PFC L4 RMST
+mic.6	IFG PFC L4 RMST
+astTinf	CD8 T
+L5 6 NP	mic.8
+mic.6	CD8 T
+IFG PFC L4 RMST	IFG PFC L4 RMST
+Lamp5 Lhx6	end.7
+L5 IT	astR0
+astIM	astH0
+IFG PFC L4 RMST	CD8 T
+astR0	Lamp5
+L6 IT Car3	CD8 T.4
+mic.5	Lamp5 Lhx6
+astR1	Sncg
+astR1	other T
+mic.11	astR0
+mic.5	L4 IT
+Lamp5	CD4 T
+CD8 T	end.6
+mic.11	astR1
+CD4 T	mic.3
+astR1	mic.3
+NK	end.0
+astR0	astR1
+end.7	L6 IT
+L6b	mic.11
+Lamp5	Sncg
+Sst	end.6
+L4 IT	mic.1
+CD4 T	IFG PFC L4 RMST
+CD4 T	CD8 T
+Lamp5	other T
+Pvalb	astR2
+Lamp5 Lhx6	Lamp5
+Sst	astR2
+end.1	Chandelier
+astTinf	mic.6
+mic.6	mic.6
+astH0	CD8 T.4
+L5 6 NP	NK
+CD8 T.4	L6 IT
+IFG PFC L4 RMST	mic.6
+astR2	mic.7
+Sst	astTinf
+Vip	mic.7
+Pvalb	end.3
+L6 IT	Lamp5 Lhx6
+L6b	mic.4
+Pvalb	mic.0
+mic.10	L5 IT
+Sst	end.3
+end.2	L4 IT
+CD8 T	end.4
+mic.0	mic.8
+astMet	mic.7
+Pvalb	NK
+L2 3 IT	mic.3
+end.0	Pvalb
+L5 6 NP	end.7
+end.5	Lamp5 Lhx6
+Sst	Sst
+astTinf	mic.9
+L4 IT	L5 6 NP
+L2 3 IT	IFG PFC L4 RMST
+Chandelier	L5 IT
+mic.6	mic.9
+astR0	mic.1
+L2 3 IT	CD8 T
+IFG PFC L4 RMST	mic.9
+CD8 T	astR0
+end.6	end.5
+CD8 T	astR1
+mic.4	other T
+L4 IT	end.0
+end.0	end.2
+Sncg	end.5
+mic.4	mic.3
+astTinf	astH0
+Sst	astR0
+mic.6	astH0
+IFG PFC L4 RMST	astH0
+other T	astMet
+L5 6 NP	Lamp5
+astR1	Lamp5 Lhx6
+L6 CT	CD4 T
+mic.4	IFG PFC L4 RMST
+mic.8	Pvalb
+other T	L6 CT
+end.3	Pvalb
+mic.5	Chandelier
+Pvalb	astIM
+Sst	astIM
+L6 CT	Sncg
+mic.11	L5 6 NP
+L5 IT	end.0
+astR0	L5 6 NP
+Lamp5	Lamp5 Lhx6
+L6 CT	other T
+CD4 T	astH0
+end.7	L6b
+Lamp5	L4 IT
+astR2	Vip
+mic.11	end.0
+L6 CT	mic.3
+mic.10	end.6
+mic.9	CD8 T
+Vip	Vip
+astH0	L6 IT
+astMet	Vip
+Chandelier	end.6
+mic.1	mic.7
+Pax6	CD8 T
+L6b	end.1
+end.6	L6b
+end.2	Chandelier
+mic.10	astTinf
+end.1	Pvalb
+Chandelier	astR2
+Sncg	L6b
+mic.0	end.4
+mic.8	mic.10
+end.3	mic.10
+L6 IT	astMet
+Chandelier	astTinf
+end.6	mic.8
+L6 IT	L6 CT
+L2 3 IT	astH0
+L5 6 NP	mic.1
+end.0	Pax6
+mic.9	mic.6
+mic.10	Sst
+mic.0	astR0
+Lamp5 Lhx6	mic.7
+Chandelier	end.3
+Sncg	mic.8
+mic.0	astR1
+end.5	astMet
+CD8 T	L5 6 NP
+CD8 T.4	astR2
+end.5	L6 CT
+astR2	CD4 T
+Chandelier	Sst
+Pax6	mic.6
+Vip	CD4 T
+end.7	NK
+L6b	L6 IT
+CD8 T	end.0
+mic.10	astR0
+mic.9	mic.9
+Vip	Sncg
+L6 IT Car3	L6b
+mic.8	Pax6
+CD8 T.4	end.3
+end.3	Pax6
+L6 CT	Lamp5 Lhx6
+NK	CD8 T
+Chandelier	astR0
+end.1	mic.10
+CD8 T.4	mic.0
+Vip	other T
+CD4 T	astMet
+astR1	astMet
+CD8 T.4	NK
+CD4 T	L6 CT
+astR1	L6 CT
+L5 6 NP	L5 6 NP
+end.7	end.7
+Pax6	mic.9
+end.4	mic.11
+mic.9	astH0
+end.4	L2 3 IT
+mic.1	Vip
+L6 IT Car3	mic.8
+mic.3	mic.11
+mic.3	L2 3 IT
+Chandelier	astIM
+astIM	Pvalb
+mic.5	end.2
+Pax6	astH0
+end.0	CD8 T.4
+mic.7	mic.11
+end.7	Lamp5
+NK	mic.6
+Lamp5 Lhx6	Vip
+end.4	mic.4
+L2 3 IT	astMet
+end.1	Pax6
+mic.3	mic.4
+CD8 T.4	astIM
+L2 3 IT	L6 CT
+Pvalb	mic.7
+L4 IT	mic.3
+end.6	end.4
+end.2	Pvalb
+Sncg	end.4
+L6 IT Car3	NK
+L4 IT	IFG PFC L4 RMST
+mic.0	L5 6 NP
+astH0	astR2
+mic.7	mic.4
+mic.8	CD8 T.4
+end.3	CD8 T.4
+NK	mic.9
+mic.1	CD4 T
+mic.4	astMet
+end.2	end.2
+end.6	astR1
+mic.4	L6 CT
+mic.0	end.0
+astR2	Lamp5 Lhx6
+astIM	mic.10
+Sncg	astR1
+end.4	L6 IT Car3
+astR0	Sncg
+L6 IT Car3	end.7
+Vip	Lamp5 Lhx6
+mic.1	Sncg
+mic.3	L6 IT Car3
+astR2	L4 IT
+astH0	end.3
+astR0	other T
+NK	astH0
+Vip	L4 IT
+astH0	mic.0
+astR0	mic.3
+L5 IT	CD8 T
+astH0	NK
+Lamp5 Lhx6	CD4 T
+astMet	L4 IT
+mic.11	IFG PFC L4 RMST
+mic.11	CD8 T
+end.7	mic.1
+astR0	IFG PFC L4 RMST
+L6 CT	astMet
+L6 CT	L6 CT
+Lamp5 Lhx6	Sncg
+L6 IT Car3	Lamp5
+Lamp5 Lhx6	other T
+end.1	CD8 T.4
+L6b	astR2
+astH0	end.7
+Lamp5 Lhx6	mic.3
+Pvalb	Vip
+end.6	mic.1
+astIM	Pax6
+L6b	astTinf
+end.4	end.1
+Sncg	mic.1
+mic.3	end.1
+L5 IT	mic.6
+L6b	end.3
+Lamp5	end.2
+other T	mic.11
+astH0	astIM
+other T	L2 3 IT
+L6b	mic.0
+L6b	Sst
+astH0	Lamp5
+other T	mic.5
+end.2	Pax6
+mic.7	end.1
+mic.8	L6 IT
+end.3	L6 IT
+CD8 T	IFG PFC L4 RMST
+astTinf	mic.10
+L5 IT	mic.9
+mic.6	mic.10
+CD8 T	CD8 T
+end.6	L5 6 NP
+IFG PFC L4 RMST	mic.10
+mic.5	mic.5
+mic.1	Lamp5 Lhx6
+astR2	Chandelier
+L5 6 NP	Sncg
+Sncg	L5 6 NP
+end.6	end.0
+Pvalb	CD4 T
+Vip	Chandelier
+L6 IT Car3	mic.1
+mic.1	L4 IT
+L5 6 NP	other T
+L5 IT	astH0
+L5 6 NP	mic.3
+Sncg	end.0
+astMet	Chandelier
+L6b	astIM
+mic.11	astH0
+Pvalb	Sncg
+CD8 T.4	mic.7
+astIM	CD8 T.4
+Lamp5 Lhx6	Lamp5 Lhx6
+L6 IT	mic.11
+L6 IT	L2 3 IT
+other T	L6 IT Car3
+Lamp5 Lhx6	L4 IT
+CD8 T	mic.6
+end.1	L6 IT
+IFG PFC L4 RMST	Pax6
+L6 IT	mic.5
+end.5	L2 3 IT
+Sst	mic.6
+end.2	CD8 T.4
+end.0	L6b
+end.4	L5 IT
+end.5	mic.5
+mic.3	L5 IT
+L4 IT	astMet
+mic.9	Pvalb
+L4 IT	L6 CT
+astTinf	mic.4
+CD4 T	mic.11
+mic.6	mic.4
+astR1	mic.11
+end.0	mic.8
+astR1	L2 3 IT
+IFG PFC L4 RMST	mic.4
+end.7	Vip
+Sst	mic.9
+mic.7	L5 IT
+Pax6	Pvalb
+other T	end.1
+mic.0	IFG PFC L4 RMST
+CD8 T	astH0
+mic.0	CD8 T
+astR1	mic.5
+L5 6 NP	Lamp5 Lhx6
+Lamp5	L2 3 IT
+CD8 T.4	Vip
+mic.1	Chandelier
+L6 IT	L6 IT Car3
+CD4 T	mic.4
+mic.10	CD8 T
+astR0	astMet
+Lamp5	mic.5
+Pvalb	Lamp5 Lhx6
+astR0	L6 CT
+astH0	mic.7
+end.5	L6 IT Car3
+astR2	Pvalb
+L2 3 IT	mic.11
+end.0	NK
+Pvalb	L4 IT
+L2 3 IT	L2 3 IT
+astIM	L6 IT
+mic.9	mic.10
+mic.8	astR2
+other T	end.5
+end.3	astR2
+end.4	end.6
+astMet	Pvalb
+mic.3	end.6
+astR2	end.2
+end.7	CD4 T
+end.1	L6b
+Pax6	mic.10
+Vip	end.2
+CD4 T	L6 IT Car3
+end.0	end.7
+mic.8	end.3
+astR1	L6 IT Car3
+end.3	end.3
+mic.4	mic.11
+NK	Pvalb
+astMet	end.2
+mic.4	L2 3 IT
+end.7	Sncg
+L2 3 IT	mic.4
+mic.10	mic.6
+end.4	astTinf
+end.3	mic.0
+mic.8	mic.0
+mic.7	end.6
+end.7	other T
+mic.8	NK
+mic.3	astTinf
+end.3	NK
+CD8 T.4	CD4 T
+end.7	mic.3
+mic.7	astR2
+astTinf	end.1
+Lamp5	L6 IT Car3
+Chandelier	mic.6
+L6b	mic.7
+mic.9	Pax6
+CD8 T.4	Sncg
+end.4	Sst
+mic.7	astTinf
+mic.3	Sst
+end.0	Lamp5
+mic.4	mic.4
+mic.8	end.7
+end.3	end.7
+mic.0	astH0
+end.6	mic.3
+mic.10	mic.9
+L6 CT	mic.11
+L6 CT	L2 3 IT
+mic.7	end.3
+Pax6	Pax6
+other T	L5 IT
+mic.7	mic.0
+L6 IT	end.5
+L2 3 IT	L6 IT Car3
+Sncg	mic.3
+end.6	IFG PFC L4 RMST
+end.4	astR0
+astH0	Vip
+end.6	CD8 T
+CD4 T	end.1
+mic.7	Sst
+astR1	end.1
+mic.3	astR0
+Chandelier	mic.9
+L6 CT	mic.5
+mic.8	astIM
+end.3	astIM
+Sncg	IFG PFC L4 RMST
+NK	mic.10
+mic.10	astH0
+Sncg	CD8 T
+end.1	NK
+end.5	end.5
+mic.5	L6b
+L5 6 NP	astMet
+astTinf	L6 IT
+L5 6 NP	L6 CT
+mic.6	L6 IT
+mic.8	Lamp5
+end.3	Lamp5
+Pvalb	Chandelier
+IFG PFC L4 RMST	L6 IT
+L6 IT Car3	CD4 T
+Sst	Chandelier
+mic.4	L6 IT Car3
+mic.5	mic.8
+L6 IT Car3	Sncg
+end.1	end.7
+astMet	Pax6
+mic.1	end.2
+L6 IT Car3	other T
+astR1	end.5
+mic.7	astIM
+L6 IT Car3	mic.3
+L2 3 IT	end.1
+end.7	Lamp5 Lhx6
+end.0	mic.1
+L6b	Vip
+NK	Pax6
+astH0	CD4 T
+end.2	L6b
+L6 IT	L5 IT
+L6 CT	L6 IT Car3
+Lamp5	end.5
+mic.11	astTinf
+astIM	astR2
+other T	end.6
+Pax6	CD8 T.4
+end.7	L6 IT Car3
+Lamp5 Lhx6	end.2
+end.1	Lamp5
+CD8 T.4	Lamp5 Lhx6
+astH0	Sncg
+end.5	L5 IT
+mic.4	end.1
+astH0	other T
+CD8 T.4	L4 IT
+end.2	mic.8
+astIM	end.3
+astR2	mic.5
+astIM	mic.0
+end.6	astH0
+astIM	NK
+end.5	mic.8
+astR2	CD8 T.4
+Sncg	astH0
+CD4 T	L5 IT
+astR1	L5 IT
+L5 IT	mic.10
+other T	end.4
+astMet	CD8 T.4
+mic.4	end.5
+astIM	end.7
+L4 IT	mic.11
+L4 IT	L2 3 IT
+end.2	NK
+mic.5	end.4
+L6 IT Car3	Lamp5 Lhx6
+other T	astR0
+L6 IT	end.6
+other T	astR1
+end.1	mic.1
+Sst	Pvalb
+astIM	astIM
+Chandelier	Chandelier
+end.5	end.6
+mic.9	L6 IT
+Lamp5	mic.8
+L2 3 IT	L5 IT
+end.2	end.7
+astIM	Lamp5
+L6 CT	end.5
+mic.5	astR1
+Pvalb	end.2
+astTinf	astR2
+L5 IT	Pax6
+mic.6	astR2
+L4 IT	mic.4
+IFG PFC L4 RMST	astR2
+mic.8	mic.7
+end.3	mic.7
+end.7	astMet
+Pax6	L6 IT
+end.7	L6 CT
+astTinf	astTinf
+astH0	Lamp5 Lhx6
+mic.11	mic.11
+mic.6	astTinf
+astR0	mic.11
+IFG PFC L4 RMST	astTinf
+CD8 T.4	Chandelier
+astR0	L2 3 IT
+astH0	L4 IT
+astTinf	end.3
+CD4 T	end.6
+L6 IT	end.4
+mic.6	end.3
+astR1	end.6
+mic.4	L5 IT
+IFG PFC L4 RMST	end.3
+astTinf	mic.0
+L6b	mic.9
+mic.6	mic.0
+end.2	Lamp5
+end.6	astMet
+CD8 T	mic.10
+CD4 T	astR2
+IFG PFC L4 RMST	mic.0
+end.6	L6 CT
+astR0	mic.5
+astTinf	Sst
+L5 IT	mic.4
+mic.1	mic.5
+mic.6	Sst
+Sncg	astMet
+end.5	end.4
+Sncg	L6 CT
+L4 IT	L6 IT Car3
+L6 IT	astR0
+Sst	mic.10
+mic.11	mic.4
+CD4 T	astTinf
+mic.1	CD8 T.4
+Lamp5 Lhx6	L2 3 IT
+L6 IT	astR1
+mic.5	mic.1
+CD4 T	end.3
+end.1	mic.7
+end.5	astR0
+CD4 T	mic.0
+L6 CT	L5 IT
+Lamp5 Lhx6	mic.5
+end.5	astR1
+CD4 T	Sst
+L2 3 IT	end.6
+astR1	end.4
+L6b	L4 IT
+NK	L6 IT
+astTinf	astIM
+mic.6	astIM
+CD8 T	mic.11
+IFG PFC L4 RMST	astIM
+mic.8	Vip
+end.3	Vip
+Vip	end.5
+L6 IT Car3	astMet
+CD4 T	astR0
+astR1	astR0
+astR0	L6 IT Car3
+Lamp5	end.4
+mic.10	Pvalb
+Sst	Pax6
+L6 IT Car3	L6 CT
+L2 3 IT	astTinf
+other T	end.0
+astR1	astR1
+L4 IT	end.1
+mic.4	end.6
+mic.5	L5 6 NP
+end.2	mic.1
+Chandelier	Pvalb
+end.0	CD4 T
+CD4 T	astIM
+CD8 T	mic.4
+L2 3 IT	Sst
+Lamp5	astR1
+astH0	Chandelier
+L5 6 NP	mic.11
+L5 6 NP	L2 3 IT
+Lamp5 Lhx6	L6 IT Car3
+mic.4	astTinf
+end.0	Sncg
+end.0	other T
+end.7	end.2
+L5 6 NP	mic.5
+mic.9	astR2
+L6 CT	end.6
+L2 3 IT	astR0
+end.0	mic.3
+end.1	Vip
+mic.11	end.1
+astIM	mic.7
+astR0	end.1
+mic.4	Sst
+mic.8	CD4 T
+mic.4	end.4
+end.3	CD4 T
+mic.10	mic.10
+L6 IT	L5 6 NP
+astR2	L6b
+Pax6	astR2
+Pvalb	mic.5
+CD8 T.4	end.2
+Vip	L6b
+end.4	CD8 T
+L2 3 IT	astIM
+mic.9	end.3
+mic.3	CD8 T
+mic.8	Sncg
+end.3	Sncg
+L6 IT	end.0
+mic.9	mic.0
+astMet	L6b
+Chandelier	mic.10
+mic.8	other T
+mic.4	astR0
+end.5	L5 6 NP
+end.3	other T
+mic.9	NK
+Sst	CD8 T.4
+L6b	Chandelier
+Lamp5	mic.1
+astR2	mic.8
+Pax6	end.3
+L5 IT	L6 IT
+Vip	mic.8
+end.5	end.0
+mic.0	mic.11
+Pax6	mic.0
+L6 CT	end.4
+astR0	end.5
+Pax6	NK
+astMet	mic.8
+L5 6 NP	L6 IT Car3
+mic.10	Pax6
+end.1	CD4 T
+astR1	L5 6 NP
+end.4	mic.6
+L4 IT	L5 IT
+L6 CT	astR0
+mic.3	mic.6
+L6 CT	astR1
+CD8 T	end.1
+astR1	end.0
+mic.0	mic.4
+Chandelier	Pax6
+Lamp5 Lhx6	end.5
+end.1	Sncg
+mic.9	astIM
+NK	astR2
+end.1	other T
+Lamp5	L5 6 NP
+astR2	NK
+end.0	Lamp5 Lhx6
+mic.7	mic.6
+astIM	Vip
+end.1	mic.3
+Lamp5	end.0
+Pax6	astIM
+end.4	mic.9
+astMet	NK
+astTinf	mic.7
+mic.6	mic.7
+mic.3	mic.9
+IFG PFC L4 RMST	mic.7
+NK	end.3
+L5 6 NP	end.1
+astR2	end.7
+NK	mic.0
+mic.11	L5 IT
+NK	NK
+astR0	L5 IT
+mic.1	L6b
+end.4	astH0
+astH0	end.2
+CD8 T	L6 IT
+mic.3	astH0
+mic.8	Lamp5 Lhx6
+mic.7	mic.9
+end.3	Lamp5 Lhx6
+astMet	end.7
+mic.8	L4 IT
+end.3	L4 IT
+Sst	L6 IT
+end.7	L2 3 IT
+mic.10	CD8 T.4
+mic.1	mic.8
+L4 IT	end.6
+Vip	end.4
+astR2	Lamp5
+L5 6 NP	end.5
+astIM	CD4 T
+mic.4	end.0
+end.7	mic.5
+other T	IFG PFC L4 RMST
+L6b	Pvalb
+Chandelier	CD8 T.4
+other T	CD8 T
+end.6	mic.11
+astMet	Lamp5
+end.6	L2 3 IT
+astR2	astR1
+mic.5	mic.3
+NK	astIM
+L4 IT	astTinf
+Vip	astR1
+astIM	Sncg
+Sncg	mic.11
+Sncg	L2 3 IT
+Lamp5 Lhx6	mic.8
+astIM	other T
+mic.5	IFG PFC L4 RMST
+mic.0	end.1
+L6b	end.2
+CD8 T.4	mic.5
+end.1	Lamp5 Lhx6
+L6 CT	L5 6 NP
+end.2	CD4 T
+astTinf	Vip
+end.1	L4 IT
+mic.6	Vip
+L5 IT	astR2
+mic.11	end.6
+L4 IT	Sst
+IFG PFC L4 RMST	Vip
+L6 CT	end.0
+astR0	end.6
+end.6	mic.4
+mic.11	astR2
+end.2	Sncg
+Sncg	mic.4
+L5 IT	astTinf
+other T	mic.6
+end.2	other T
+end.0	astMet
+end.0	L6 CT
+L4 IT	astR0
+end.2	mic.3

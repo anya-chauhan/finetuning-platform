@@ -5,6 +5,7 @@ import { TrainTab } from './components/Training';
 import { JobsTab } from './components/Jobs';
 import { PredictTab } from './components/Predictions';
 import { ExploreTab } from './components/Explorer';
+import { GraphTab } from './components/Graph';
 
 import './styles/variables.css';
 import './styles/index.css';
@@ -16,6 +17,7 @@ import './styles/components/Jobs.css';
 import './styles/components/Modal.css';
 import './styles/components/Explorer.css';
 import './styles/components/Predictions.css';
+import './styles/components/Graph.css';
 import './styles/utilities/animations.css';
 import './styles/utilities/responsive.css';
 
@@ -51,8 +53,8 @@ function App() {
   return (
     <div className="app">
       <header className="header">
-        <h1>Protein Fine-Tuning Platform</h1>
-        <p>Web-based fine-tuning of pre-trained protein embeddings for biological insights</p>
+        <h1>Protein Fine-Tuning Platform to Study Alzheimer's</h1>
+        <p>Interactive platform to fine-tune pre-trained protein embeddings from ALZ-GNN for biological insights</p>
       </header>
 
       <nav className="nav">
@@ -80,12 +82,14 @@ function App() {
         >
           Make Predictions
         </button>
-        <button 
-          className={activeTab === 'explore' ? 'active' : ''}
-          onClick={() => setActiveTab('explore')}
+
+      <button 
+          className={activeTab === 'graph' ? 'active' : ''}
+          onClick={() => setActiveTab('graph')}
         >
-          Explore Embeddings
-        </button>
+          Explore ALZ-GNN
+        </button> 
+        
       </nav>
 
       <main className="main">
@@ -117,6 +121,10 @@ function App() {
         {activeTab === 'explore' && (
           <ExploreTab contexts={contexts} />
         )}
+        {activeTab === 'graph' && (
+          <GraphTab contexts={contexts} />
+        )}
+        
       </main>
       
       <footer className="footer">

@@ -6,6 +6,8 @@ import uvicorn
 from app.api.routes import router
 from app.core.config import settings
 from app.services.data_service import DataService
+from app.services.graph_service import graph_service
+
 
 app = FastAPI(title="PINNACLE Fine-tuning API", version="1.0.0")
 
@@ -33,6 +35,10 @@ async def startup_event():
         print(f"   - Proteins: {data_service.num_proteins}")
         print(f"   - Contexts: {data_service.num_contexts}")
         print(f"   - Embedding dimension: {data_service.embedding_dim}")
+        """Load all graphs into memory on startup"""
+        print("Starting up - loading graph data...")
+        await graph_service.load_all_graphs()
+        print("Graph data loaded successfully")
     except Exception as e:
         print(f"❌ Failed to initialize data service: {e}")
         import traceback

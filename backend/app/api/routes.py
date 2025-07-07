@@ -9,6 +9,7 @@ from app.models.schemas import (
     ProteinContextResponse, ContextInfo
 )
 from app.services.data_service import DataService
+from app.services.graph_service import graph_service
 from app.services.training_service import TrainingService
 from app.services.prediction_service import PredictionService
 
@@ -224,3 +225,16 @@ async def get_gene_importance(
             }
         except ValueError:
             raise HTTPException(status_code=404, detail="Training run not found")
+        
+@router.get("/graph/ppi/{context}")
+async def get_ppi_graph(context: str):
+    """Get PPI graph data for a specific context (from cache)"""
+    graph_data = graph_service.get_graph(context)
+    
+    if graph_data is None:
+        raise HTTPException(
+            status_code=404, 
+            detail=f"Graph not found for context: {context}"
+        )
+    
+    return graph_data

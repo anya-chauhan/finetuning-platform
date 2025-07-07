@@ -319,6 +319,7 @@
   font-size: var(--text-md);
   transition: all var(--transition-base);
   background: #fafafa;
+  margin-right: 5px;
 }
 
 .search-input:focus {

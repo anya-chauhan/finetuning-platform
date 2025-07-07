@@ -20,8 +20,9 @@ export function TrainTab({ contexts, uploadedData, onJobCreated }) {
   const [useCustomParams, setUseCustomParams] = useState(false);
   const [selectAll, setSelectAll] = useState(false); // ADD THIS
 
-  // Prepare context options for react-select
-  const contextOptions = contexts.map(ctx => ({ value: ctx, label: ctx })); // ADD THIS
+  // Filter out contexts containing "cells" and prepare context options for react-select
+  const filteredContexts = contexts.filter(ctx => !ctx.toLowerCase().includes('cells'));
+  const contextOptions = filteredContexts.map(ctx => ({ value: ctx, label: ctx }));
 
   
   // Fetch parameter suggestions when data is uploaded

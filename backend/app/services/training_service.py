@@ -22,6 +22,10 @@ class TrainingService:
         self.jobs: Dict[str, dict] = {}
         self.trained_models: Dict[str, dict] = {}
         
+    def _filter_contexts(self, contexts: List[str]) -> List[str]:
+        """Filter out contexts containing 'cells'"""
+        return [ctx for ctx in contexts if 'cells' not in ctx.lower()]
+        
     async def upload_training_data(self, positive_contents: bytes, negative_contents: bytes) -> Dict:
         """Process uploaded training data files"""
         try:
@@ -232,6 +236,12 @@ class TrainingService:
         if data_id not in self.jobs or self.jobs[data_id]["type"] != "data":
             raise ValueError("Training data not found")
         
+        # Filter contexts to exclude those with "cells"
+        if hasattr(request, 'selected_contexts') and request.selected_contexts:
+            request.selected_contexts = self._filter_contexts(request.selected_contexts)
+            if not request.selected_contexts:
+                raise ValueError("No valid contexts available after filtering (all contained 'cells')")
+        
         # Validate context
         context_id = self.data_service.parse_context(request.context)
         
@@ -277,11 +287,15 @@ class TrainingService:
             # Determine which contexts to use
             contexts_to_use = []
             if 'selected_contexts' in config_dict and config_dict['selected_contexts']:
-                contexts_to_use = config_dict['selected_contexts']
+                # Filter contexts to exclude those with "cells"
+                contexts_to_use = self._filter_contexts(config_dict['selected_contexts'])
             elif config.context:
-                contexts_to_use = [config.context]
-            else:
-                raise ValueError("No contexts selected for training")
+                # Also filter single context
+                if 'cells' not in config.context.lower():
+                    contexts_to_use = [config.context]
+            
+            if not contexts_to_use:
+                raise ValueError("No valid contexts available for training (all contained 'cells')")
 
             print(f"Training with contexts: {contexts_to_use}")
 
@@ -505,10 +519,11 @@ class TrainingService:
             
             # Handle multi-select contexts
             if 'selected_contexts' in config_dict and config_dict['selected_contexts']:
-                contexts_to_analyze = config_dict['selected_contexts']
+                # Filter contexts for gene importance calculation
+                contexts_to_analyze = self._filter_contexts(config_dict['selected_contexts'])
                 print(f"Found selected_contexts: {contexts_to_analyze}")
             # Fall back to single context for backward compatibility
-            elif config.context:
+            elif config.context and 'cells' not in config.context.lower():
                 contexts_to_analyze = [config.context]
                 print(f"Using single context: {config.context}")
             
